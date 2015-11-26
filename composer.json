@@ -4,7 +4,8 @@
     "type": "library",
     "keywords": [
         "framework",
-        "zf1"
+        "awery",
+        "zend_amf"
     ],
     "require": {
         "php": ">=5.6.*"
