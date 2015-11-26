@@ -1,0 +1,406 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>Zend AMF API Documentation » \Zend_Amf_Parse_Amf3_Serializer</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">Zend AMF API Documentation</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Zend.html"><i class="icon-folder-open"></i> Zend</a></li>
+<li><a href="../packages/Zend_Amf.html"><i class="icon-folder-open"></i> Zend_Amf</a></li>
+<li><a href="../packages/Zend_Auth.html"><i class="icon-folder-open"></i> Zend_Auth</a></li>
+<li><a href="../packages/Zend_Date.html"><i class="icon-folder-open"></i> Zend_Date</a></li>
+<li><a href="../packages/Zend_Loader.html"><i class="icon-folder-open"></i> Zend_Loader</a></li>
+<li><a href="../packages/Zend_Server.html"><i class="icon-folder-open"></i> Zend_Server</a></li>
+<li><a href="../packages/Zend_Session.html"><i class="icon-folder-open"></i> Zend_Session</a></li>
+<li><a href="../packages/Zend_Version.html"><i class="icon-folder-open"></i> Zend_Version</a></li>
+</ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">77</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">5</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<div xmlns:php="http://php.net/xsl" class="btn-toolbar">
+<div class="btn-group visibility" data-toggle="buttons-checkbox">
+<button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button>
+</div>
+<div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+</div>
+<ul xmlns:php="http://php.net/xsl" class="side-nav nav nav-list">
+<li class="nav-header">
+<i title="Methods" class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public inherited"><a href="#method___construct" title="__construct() :: Constructor"><span class="description">Constructor</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method_writeArray" title="writeArray() :: Write a PHP array back to the amf output stream"><span class="description">Write a PHP array back to the amf output stream</span><pre>writeArray()</pre></a></li>
+<li class="method public "><a href="#method_writeByteArray" title="writeByteArray() :: Send ByteArray to output stream"><span class="description">Send ByteArray to output stream</span><pre>writeByteArray()</pre></a></li>
+<li class="method public "><a href="#method_writeDate" title="writeDate() :: Convert DateTime/Zend_Date to AMF date"><span class="description">Convert DateTime/Zend_Date to AMF date</span><pre>writeDate()</pre></a></li>
+<li class="method public "><a href="#method_writeInteger" title="writeInteger() :: Write an AMF3 integer"><span class="description">Write an AMF3 integer</span><pre>writeInteger()</pre></a></li>
+<li class="method public "><a href="#method_writeObject" title="writeObject() :: Write object to ouput stream"><span class="description">Write object to ouput stream</span><pre>writeObject()</pre></a></li>
+<li class="method public "><a href="#method_writeString" title="writeString() :: Send string to output stream"><span class="description">Send string to output stream</span><pre>writeString()</pre></a></li>
+<li class="method public "><a href="#method_writeTypeMarker" title="writeTypeMarker() :: Serialize PHP types to AMF3 and write to stream"><span class="description">Serialize PHP types to AMF3 and write to stream</span><pre>writeTypeMarker()</pre></a></li>
+<li class="method public inherited"><a href="#method_writeTypeMarker" title="writeTypeMarker() :: Find the PHP object type and convert it into an AMF object type"><span class="description">Find the PHP object type and convert it into an AMF object type</span><pre>writeTypeMarker()</pre></a></li>
+<li class="method public "><a href="#method_writeXml" title="writeXml() :: Send xml to output stream"><span class="description">Send xml to output stream</span><pre>writeXml()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="method protected "><a href="#method_writeBinaryString" title="writeBinaryString() :: Send string to output stream, without trying to reference it."><span class="description">Send string to output stream, without trying to reference it.</span><pre>writeBinaryString()</pre></a></li>
+<li class="method protected "><a href="#method_writeObjectReference" title="writeObjectReference() :: Check if the given object is in the reference table, write the reference if it exists,
+otherwise add the object to the reference table"><span class="description">Check if the given object is in the reference table, write the reference if it exists,
+otherwise add the object to the reference table</span><pre>writeObjectReference()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i title="Properties" class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected "><a href="#property__referenceDefinitions" title="$_referenceDefinitions() :: An array of reference class definitions, indexed by classname"><span class="description"></span><pre>$_referenceDefinitions</pre></a></li>
+<li class="property protected "><a href="#property__referenceObjects" title="$_referenceObjects() :: An array of reference objects per amf body"><span class="description"></span><pre>$_referenceObjects</pre></a></li>
+<li class="property protected "><a href="#property__referenceStrings" title="$_referenceStrings() :: An array of reference strings per amf body"><span class="description"></span><pre>$_referenceStrings</pre></a></li>
+<li class="property protected "><a href="#property__strEmpty" title="$_strEmpty() :: A constant empty string"><span class="description"></span><pre>$_strEmpty</pre></a></li>
+<li class="property protected "><a href="#property__stream" title="$_stream() :: Reference to the current output stream being constructed"><span class="description"></span><pre>$_stream</pre></a></li>
+<li class="property protected "><a href="#property_mbStringFunctionsOverloaded" title="$mbStringFunctionsOverloaded() :: str* functions overloaded using mbstring.func_overload"><span class="description"></span><pre>$mbStringFunctionsOverloaded</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a xmlns:php="http://php.net/xsl" id="\Zend_Amf_Parse_Amf3_Serializer"></a><ul xmlns:php="http://php.net/xsl" class="breadcrumb">
+<li>
+<a href="../index.html"><i title="Classes" class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Zend_Amf_Parse_Amf3_Serializer.html">Zend_Amf_Parse_Amf3_Serializer</a>
+</li>
+</ul>
+<div xmlns:php="http://php.net/xsl" class="element class">
+<p class="short_description">Detect PHP object type and convert it to a corresponding AMF3 object type</p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/Zend_Amf.Parse_Amf3.html">Zend_Amf</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Parse_Amf3</td>
+</tr>
+<tr>
+<th>copyright</th>
+<td>Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)</td>
+</tr>
+<tr>
+<th>license</th>
+<td><a href="http://framework.zend.com/license/new-bsd">New BSD License</a></td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend_Amf_Parse_Serializer</td>
+</tr>
+</table>
+<h3>
+<i title="Methods" class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___construct"></a><div class="element clickable method public method___construct inherited" data-toggle="collapse" data-target=".method___construct .collapse" title="public">
+<h2>Constructor</h2>
+<pre>__construct(\Zend_Amf_Parse_OutputStream $stream) : void</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$stream</h4>
+<code>\Zend_Amf_Parse_OutputStream</code>
+</div>
+</div></div>
+</div>
+<a id="method_writeArray"></a><div class="element clickable method public method_writeArray " data-toggle="collapse" data-target=".method_writeArray .collapse" title="public">
+<h2>Write a PHP array back to the amf output stream</h2>
+<pre>writeArray(array $array) : \Zend_Amf_Parse_Amf3_Serializer</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$array</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend_Amf_Parse_Amf3_Serializer</code></div>
+</div></div>
+</div>
+<a id="method_writeByteArray"></a><div class="element clickable method public method_writeByteArray " data-toggle="collapse" data-target=".method_writeByteArray .collapse" title="public">
+<h2>Send ByteArray to output stream</h2>
+<pre>writeByteArray(string|\Zend_Amf_Value_ByteArray $data) : \Zend_Amf_Parse_Amf3_Serializer</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>string</code><code>\Zend_Amf_Value_ByteArray</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend_Amf_Parse_Amf3_Serializer</code></div>
+</div></div>
+</div>
+<a id="method_writeDate"></a><div class="element clickable method public method_writeDate " data-toggle="collapse" data-target=".method_writeDate .collapse" title="public">
+<h2>Convert DateTime/Zend_Date to AMF date</h2>
+<pre>writeDate(\DateTime|\Zend_Date $date) : \Zend_Amf_Parse_Amf3_Serializer</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$date</h4>
+<code>\DateTime</code><code>\Zend_Date</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend_Amf_Parse_Amf3_Serializer</code></div>
+</div></div>
+</div>
+<a id="method_writeInteger"></a><div class="element clickable method public method_writeInteger " data-toggle="collapse" data-target=".method_writeInteger .collapse" title="public">
+<h2>Write an AMF3 integer</h2>
+<pre>writeInteger($int) : \Zend_Amf_Parse_Amf3_Serializer</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$int</h4></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend_Amf_Parse_Amf3_Serializer</code></div>
+</div></div>
+</div>
+<a id="method_writeObject"></a><div class="element clickable method public method_writeObject " data-toggle="collapse" data-target=".method_writeObject .collapse" title="public">
+<h2>Write object to ouput stream</h2>
+<pre>writeObject($object) : \Zend_Amf_Parse_Amf3_Serializer</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$object</h4></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend_Amf_Parse_Amf3_Serializer</code></div>
+</div></div>
+</div>
+<a id="method_writeString"></a><div class="element clickable method public method_writeString " data-toggle="collapse" data-target=".method_writeString .collapse" title="public">
+<h2>Send string to output stream</h2>
+<pre>writeString(string $string) : \Zend_Amf_Parse_Amf3_Serializer</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$string</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend_Amf_Parse_Amf3_Serializer</code></div>
+</div></div>
+</div>
+<a id="method_writeTypeMarker"></a><div class="element clickable method public method_writeTypeMarker " data-toggle="collapse" data-target=".method_writeTypeMarker .collapse" title="public">
+<h2>Serialize PHP types to AMF3 and write to stream</h2>
+<pre>writeTypeMarker(mixed $data, integer $markerType<code> = null</code>, mixed $dataByVal<code> = false</code>) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Checks to see if the type was declared and then either
+auto negotiates the type or use the user defined markerType to
+serialize the data from php back to AMF3</p></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend_Amf_Parse_Serializer::writeTypeMarker()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>mixed</code>
+</div>
+<div class="subelement argument">
+<h4>$markerType</h4>
+<code>integer</code>
+</div>
+<div class="subelement argument">
+<h4>$dataByVal</h4>
+<code>mixed</code>
+</div>
+</div></div>
+</div>
+<a id="method_writeTypeMarker"></a><div class="element clickable method public method_writeTypeMarker inherited" data-toggle="collapse" data-target=".method_writeTypeMarker .collapse" title="public">
+<h2>Find the PHP object type and convert it into an AMF object type</h2>
+<pre>writeTypeMarker(mixed $content, integer $markerType<code> = null</code>, mixed $contentByVal<code> = false</code>) : void</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$content</h4>
+<code>mixed</code>
+</div>
+<div class="subelement argument">
+<h4>$markerType</h4>
+<code>integer</code>
+</div>
+<div class="subelement argument">
+<h4>$contentByVal</h4>
+<code>mixed</code>
+</div>
+</div></div>
+</div>
+<a id="method_writeXml"></a><div class="element clickable method public method_writeXml " data-toggle="collapse" data-target=".method_writeXml .collapse" title="public">
+<h2>Send xml to output stream</h2>
+<pre>writeXml(\DOMDocument|\SimpleXMLElement $xml) : \Zend_Amf_Parse_Amf3_Serializer</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$xml</h4>
+<code>\DOMDocument</code><code>\SimpleXMLElement</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend_Amf_Parse_Amf3_Serializer</code></div>
+</div></div>
+</div>
+<a id="method_writeBinaryString"></a><div class="element clickable method protected method_writeBinaryString " data-toggle="collapse" data-target=".method_writeBinaryString .collapse" title="protected">
+<h2>Send string to output stream, without trying to reference it.</h2>
+<pre>writeBinaryString(string $string) : \Zend_Amf_Parse_Amf3_Serializer</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The string is prepended with strlen($string) &lt;&lt; 1 | 0x01</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$string</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend_Amf_Parse_Amf3_Serializer</code></div>
+</div></div>
+</div>
+<a id="method_writeObjectReference"></a><div class="element clickable method protected method_writeObjectReference " data-toggle="collapse" data-target=".method_writeObjectReference .collapse" title="protected">
+<h2>Check if the given object is in the reference table, write the reference if it exists,
+otherwise add the object to the reference table</h2>
+<pre>writeObjectReference(mixed $object, mixed $objectByVal<code> = false</code>) : Boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$object</h4>
+<code>mixed</code><p>object reference to check for reference</p></div>
+<div class="subelement argument">
+<h4>$objectByVal</h4>
+<code>mixed</code><p>object to check for reference</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>Boolean</code>true, if the reference was written, false otherwise</div>
+</div></div>
+</div>
+<h3>
+<i title="Properties" class="icon-custom icon-property"></i> Properties</h3>
+<a id="property__referenceDefinitions"> </a><div class="element clickable property protected property__referenceDefinitions" data-toggle="collapse" data-target=".property__referenceDefinitions .collapse" title="protected">
+<h2>An array of reference class definitions, indexed by classname</h2>
+<pre>$_referenceDefinitions : array</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>array()</code></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__referenceObjects"> </a><div class="element clickable property protected property__referenceObjects" data-toggle="collapse" data-target=".property__referenceObjects .collapse" title="protected">
+<h2>An array of reference objects per amf body</h2>
+<pre>$_referenceObjects : array</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>array()</code></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__referenceStrings"> </a><div class="element clickable property protected property__referenceStrings" data-toggle="collapse" data-target=".property__referenceStrings .collapse" title="protected">
+<h2>An array of reference strings per amf body</h2>
+<pre>$_referenceStrings : array</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>array()</code></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__strEmpty"> </a><div class="element clickable property protected property__strEmpty" data-toggle="collapse" data-target=".property__strEmpty .collapse" title="protected">
+<h2>A constant empty string</h2>
+<pre>$_strEmpty : string</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>''</code></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__stream"> </a><div class="element clickable property protected property__stream" data-toggle="collapse" data-target=".property__stream .collapse" title="protected">
+<h2>Reference to the current output stream being constructed</h2>
+<pre>$_stream : string</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_mbStringFunctionsOverloaded"> </a><div class="element clickable property protected property_mbStringFunctionsOverloaded" data-toggle="collapse" data-target=".property_mbStringFunctionsOverloaded .collapse" title="protected">
+<h2>str* functions overloaded using mbstring.func_overload</h2>
+<pre>$mbStringFunctionsOverloaded : boolean</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.8.5</a> and<br>
+            generated on 2015-11-23T12:38:53-06:00.<br></footer></div>
+</div>
+</body>
+</html>

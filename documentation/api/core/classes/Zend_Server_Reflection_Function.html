@@ -1,0 +1,507 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>Zend AMF API Documentation » \Zend_Server_Reflection_Function</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">Zend AMF API Documentation</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Zend.html"><i class="icon-folder-open"></i> Zend</a></li>
+<li><a href="../packages/Zend_Amf.html"><i class="icon-folder-open"></i> Zend_Amf</a></li>
+<li><a href="../packages/Zend_Auth.html"><i class="icon-folder-open"></i> Zend_Auth</a></li>
+<li><a href="../packages/Zend_Date.html"><i class="icon-folder-open"></i> Zend_Date</a></li>
+<li><a href="../packages/Zend_Loader.html"><i class="icon-folder-open"></i> Zend_Loader</a></li>
+<li><a href="../packages/Zend_Server.html"><i class="icon-folder-open"></i> Zend_Server</a></li>
+<li><a href="../packages/Zend_Session.html"><i class="icon-folder-open"></i> Zend_Session</a></li>
+<li><a href="../packages/Zend_Version.html"><i class="icon-folder-open"></i> Zend_Version</a></li>
+</ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">77</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">5</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<div xmlns:php="http://php.net/xsl" class="btn-toolbar">
+<div class="btn-group visibility" data-toggle="buttons-checkbox">
+<button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button>
+</div>
+<div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+</div>
+<ul xmlns:php="http://php.net/xsl" class="side-nav nav nav-list">
+<li class="nav-header">
+<i title="Methods" class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public inherited"><a href="#method___call" title="__call() :: Proxy reflection calls"><span class="description">Proxy reflection calls</span><pre>__call()</pre></a></li>
+<li class="method public inherited"><a href="#method___construct" title="__construct() :: Constructor"><span class="description">Constructor</span><pre>__construct()</pre></a></li>
+<li class="method public inherited"><a href="#method___get" title="__get() :: Retrieve configuration parameters"><span class="description">Retrieve configuration parameters</span><pre>__get()</pre></a></li>
+<li class="method public inherited"><a href="#method___set" title="__set() :: Set configuration parameters"><span class="description">Set configuration parameters</span><pre>__set()</pre></a></li>
+<li class="method public inherited"><a href="#method___wakeup" title="__wakeup() :: Wakeup from serialization"><span class="description">Wakeup from serialization</span><pre>__wakeup()</pre></a></li>
+<li class="method public inherited"><a href="#method_getDescription" title="getDescription() :: Retrieve the description"><span class="description">Retrieve the description</span><pre>getDescription()</pre></a></li>
+<li class="method public inherited"><a href="#method_getInvokeArguments" title="getInvokeArguments() :: Retrieve additional invocation arguments"><span class="description">Retrieve additional invocation arguments</span><pre>getInvokeArguments()</pre></a></li>
+<li class="method public inherited"><a href="#method_getNamespace" title="getNamespace() :: Return method's namespace"><span class="description">Return method's namespace</span><pre>getNamespace()</pre></a></li>
+<li class="method public inherited"><a href="#method_getPrototypes" title="getPrototypes() :: Retrieve all prototypes as array of
+{@link Zend_Server_Reflection_Prototype Zend_Server_Reflection_Prototypes}"><span class="description">Retrieve all prototypes as array of
+{@link Zend_Server_Reflection_Prototype Zend_Server_Reflection_Prototypes}</span><pre>getPrototypes()</pre></a></li>
+<li class="method public inherited"><a href="#method_setDescription" title="setDescription() :: Set the description"><span class="description">Set the description</span><pre>setDescription()</pre></a></li>
+<li class="method public inherited"><a href="#method_setNamespace" title="setNamespace() :: Set method's namespace"><span class="description">Set method's namespace</span><pre>setNamespace()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="method protected inherited"><a href="#method__addTree" title="_addTree() :: Create signature node tree"><span class="description">Create signature node tree</span><pre>_addTree()</pre></a></li>
+<li class="method protected inherited"><a href="#method__buildSignatures" title="_buildSignatures() :: Build method signatures"><span class="description">Build method signatures</span><pre>_buildSignatures()</pre></a></li>
+<li class="method protected inherited"><a href="#method__buildTree" title="_buildTree() :: Build the signature tree"><span class="description">Build the signature tree</span><pre>_buildTree()</pre></a></li>
+<li class="method protected inherited"><a href="#method__reflect" title="_reflect() :: Use code reflection to create method signatures"><span class="description">Use code reflection to create method signatures</span><pre>_reflect()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i title="Properties" class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected "><a href="#property__argv" title="$_argv() :: Additional arguments to pass to method on invocation"><span class="description"></span><pre>$_argv</pre></a></li>
+<li class="property protected "><a href="#property__class" title="$_class() :: Declaring class (needed for when serialization occurs)"><span class="description"></span><pre>$_class</pre></a></li>
+<li class="property protected "><a href="#property__config" title="$_config() :: Used to store extra configuration for the method (typically done by the
+server class, e.g., to indicate whether or not to instantiate a class)."><span class="description"></span><pre>$_config</pre></a></li>
+<li class="property protected "><a href="#property__description" title="$_description() :: Function/method description"><span class="description"></span><pre>$_description</pre></a></li>
+<li class="property protected "><a href="#property__namespace" title="$_namespace() :: Namespace with which to prefix function/method name"><span class="description"></span><pre>$_namespace</pre></a></li>
+<li class="property protected "><a href="#property__prototypes" title="$_prototypes() :: Prototypes"><span class="description"></span><pre>$_prototypes</pre></a></li>
+<li class="property protected "><a href="#property__reflection" title="$_reflection() :: "><span class="description"></span><pre>$_reflection</pre></a></li>
+</ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul>
+<li class="property private "><a href="#property__paramDesc" title="$_paramDesc() :: "><span class="description"></span><pre>$_paramDesc</pre></a></li>
+<li class="property private "><a href="#property__return" title="$_return() :: "><span class="description"></span><pre>$_return</pre></a></li>
+<li class="property private "><a href="#property__returnDesc" title="$_returnDesc() :: "><span class="description"></span><pre>$_returnDesc</pre></a></li>
+<li class="property private "><a href="#property__sigParams" title="$_sigParams() :: "><span class="description"></span><pre>$_sigParams</pre></a></li>
+<li class="property private "><a href="#property__sigParamsDepth" title="$_sigParamsDepth() :: "><span class="description"></span><pre>$_sigParamsDepth</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a xmlns:php="http://php.net/xsl" id="\Zend_Server_Reflection_Function"></a><ul xmlns:php="http://php.net/xsl" class="breadcrumb">
+<li>
+<a href="../index.html"><i title="Classes" class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Zend_Server_Reflection_Function.html">Zend_Server_Reflection_Function</a>
+</li>
+</ul>
+<div xmlns:php="http://php.net/xsl" class="element class">
+<p class="short_description">Function Reflection</p>
+<div class="details">
+<div class="long_description"><p>Decorates a ReflectionFunction. Allows setting and retrieving an alternate
+'service' name (i.e., the name to be used when calling via a service),
+setting and retrieving the description (originally set using the docblock
+contents), retrieving the callback and callback type, retrieving additional
+method invocation arguments, and retrieving the
+method <a href="/classes/Zend_Server_Reflection_Prototype.html">prototypes</a>.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>uses</th>
+<td><a href="Zend_Server_Reflection_Function_Abstract"></a></td>
+</tr>
+<tr>
+<th>category</th>
+<td>Zend</td>
+</tr>
+<tr>
+<th>package</th>
+<td><a href="../packages/Zend_Server.Reflection.html">Zend_Server</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Reflection</td>
+</tr>
+<tr>
+<th>copyright</th>
+<td>Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)</td>
+</tr>
+<tr>
+<th>license</th>
+<td><a href="http://framework.zend.com/license/new-bsd">New BSD License</a></td>
+</tr>
+<tr>
+<th>version</th>
+<td>$Id$</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend_Server_Reflection_Function_Abstract</td>
+</tr>
+</table>
+<h3>
+<i title="Methods" class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___call"></a><div class="element clickable method public method___call inherited" data-toggle="collapse" data-target=".method___call .collapse" title="public">
+<h2>Proxy reflection calls</h2>
+<pre>__call(string $method, array $args) : mixed</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$method</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a id="method___construct"></a><div class="element clickable method public method___construct inherited" data-toggle="collapse" data-target=".method___construct .collapse" title="public">
+<h2>Constructor</h2>
+<pre>__construct(\ReflectionFunction $r, $namespace<code> = null</code>, $argv<code> = array()</code>) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$r</h4>
+<code>\ReflectionFunction</code>
+</div>
+<div class="subelement argument"><h4>$namespace</h4></div>
+<div class="subelement argument"><h4>$argv</h4></div>
+</div></div>
+</div>
+<a id="method___get"></a><div class="element clickable method public method___get inherited" data-toggle="collapse" data-target=".method___get .collapse" title="public">
+<h2>Retrieve configuration parameters</h2>
+<pre>__get(string $key) : mixed</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Values are retrieved by key from \$_config. Returns null if no
+value found.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$key</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a id="method___set"></a><div class="element clickable method public method___set inherited" data-toggle="collapse" data-target=".method___set .collapse" title="public">
+<h2>Set configuration parameters</h2>
+<pre>__set(string $key, mixed $value) : void</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Values are stored by $key in \$_config.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$key</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$value</h4>
+<code>mixed</code>
+</div>
+</div></div>
+</div>
+<a id="method___wakeup"></a><div class="element clickable method public method___wakeup inherited" data-toggle="collapse" data-target=".method___wakeup .collapse" title="public">
+<h2>Wakeup from serialization</h2>
+<pre>__wakeup() : void</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"><p>Reflection needs explicit instantiation to work correctly. Re-instantiate
+reflection object on wakeup.</p></div></div></div>
+</div>
+<a id="method_getDescription"></a><div class="element clickable method public method_getDescription inherited" data-toggle="collapse" data-target=".method_getDescription .collapse" title="public">
+<h2>Retrieve the description</h2>
+<pre>getDescription() : void</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_getInvokeArguments"></a><div class="element clickable method public method_getInvokeArguments inherited" data-toggle="collapse" data-target=".method_getInvokeArguments .collapse" title="public">
+<h2>Retrieve additional invocation arguments</h2>
+<pre>getInvokeArguments() : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_getNamespace"></a><div class="element clickable method public method_getNamespace inherited" data-toggle="collapse" data-target=".method_getNamespace .collapse" title="public">
+<h2>Return method's namespace</h2>
+<pre>getNamespace() : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_getPrototypes"></a><div class="element clickable method public method_getPrototypes inherited" data-toggle="collapse" data-target=".method_getPrototypes .collapse" title="public">
+<h2>Retrieve all prototypes as array of
+{@link Zend_Server_Reflection_Prototype Zend_Server_Reflection_Prototypes}</h2>
+<pre>getPrototypes() : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_setDescription"></a><div class="element clickable method public method_setDescription inherited" data-toggle="collapse" data-target=".method_setDescription .collapse" title="public">
+<h2>Set the description</h2>
+<pre>setDescription(string $string) : void</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$string</h4>
+<code>string</code>
+</div>
+</div></div>
+</div>
+<a id="method_setNamespace"></a><div class="element clickable method public method_setNamespace inherited" data-toggle="collapse" data-target=".method_setNamespace .collapse" title="public">
+<h2>Set method's namespace</h2>
+<pre>setNamespace(string $namespace) : void</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$namespace</h4>
+<code>string</code>
+</div>
+</div></div>
+</div>
+<a id="method__addTree"></a><div class="element clickable method protected method__addTree inherited" data-toggle="collapse" data-target=".method__addTree .collapse" title="protected">
+<h2>Create signature node tree</h2>
+<pre>_addTree(\Zend_Server_Reflection_Node $parent, integer $level<code> = 0</code>) : void</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Recursive method to build the signature node tree. Increments through
+each array in \$_sigParams, adding every value of the next level
+to the current value (unless the current value is null).</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$parent</h4>
+<code>\Zend_Server_Reflection_Node</code>
+</div>
+<div class="subelement argument">
+<h4>$level</h4>
+<code>integer</code>
+</div>
+</div></div>
+</div>
+<a id="method__buildSignatures"></a><div class="element clickable method protected method__buildSignatures inherited" data-toggle="collapse" data-target=".method__buildSignatures .collapse" title="protected">
+<h2>Build method signatures</h2>
+<pre>_buildSignatures(array $return, string $returnDesc, $paramTypes, array $paramDesc) : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Builds method signatures using the array of return types and the array of
+parameters types</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$return</h4>
+<code>array</code><p>Array of return types</p></div>
+<div class="subelement argument">
+<h4>$returnDesc</h4>
+<code>string</code><p>Return value description</p></div>
+<div class="subelement argument"><h4>$paramTypes</h4></div>
+<div class="subelement argument">
+<h4>$paramDesc</h4>
+<code>array</code><p>Array of parameter descriptions</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method__buildTree"></a><div class="element clickable method protected method__buildTree inherited" data-toggle="collapse" data-target=".method__buildTree .collapse" title="protected">
+<h2>Build the signature tree</h2>
+<pre>_buildTree() : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Builds a signature tree starting at the return values and descending
+through each method argument. Returns an array of
+<a href="/classes/Zend_Server_Reflection_Node.html">Zend_Server_Reflection_Node</a>s.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method__reflect"></a><div class="element clickable method protected method__reflect inherited" data-toggle="collapse" data-target=".method__reflect .collapse" title="protected">
+<h2>Use code reflection to create method signatures</h2>
+<pre>_reflect() : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Determines the method help/description text from the function DocBlock
+comment. Determines method signatures using a combination of
+ReflectionFunction and parsing of DocBlock @param and @return values.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<h3>
+<i title="Properties" class="icon-custom icon-property"></i> Properties</h3>
+<a id="property__argv"> </a><div class="element clickable property protected property__argv" data-toggle="collapse" data-target=".property__argv .collapse" title="protected">
+<h2>Additional arguments to pass to method on invocation</h2>
+<pre>$_argv : array</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>array()</code></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__class"> </a><div class="element clickable property protected property__class" data-toggle="collapse" data-target=".property__class .collapse" title="protected">
+<h2>Declaring class (needed for when serialization occurs)</h2>
+<pre>$_class : string</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__config"> </a><div class="element clickable property protected property__config" data-toggle="collapse" data-target=".property__config .collapse" title="protected">
+<h2>Used to store extra configuration for the method (typically done by the
+server class, e.g., to indicate whether or not to instantiate a class).</h2>
+<pre>$_config : array</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>array()</code></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"><p>Associative array; access is as properties via __get() and
+__set()</p></div></div></div>
+</div>
+<a id="property__description"> </a><div class="element clickable property protected property__description" data-toggle="collapse" data-target=".property__description .collapse" title="protected">
+<h2>Function/method description</h2>
+<pre>$_description : string</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>''</code></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__namespace"> </a><div class="element clickable property protected property__namespace" data-toggle="collapse" data-target=".property__namespace .collapse" title="protected">
+<h2>Namespace with which to prefix function/method name</h2>
+<pre>$_namespace : string</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__prototypes"> </a><div class="element clickable property protected property__prototypes" data-toggle="collapse" data-target=".property__prototypes .collapse" title="protected">
+<h2>Prototypes</h2>
+<pre>$_prototypes : array</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>array()</code></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__reflection"> </a><div class="element clickable property protected property__reflection" data-toggle="collapse" data-target=".property__reflection .collapse" title="protected">
+<h2>$_reflection</h2>
+<pre>$_reflection : \ReflectionFunction</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__paramDesc"> </a><div class="element clickable property private property__paramDesc" data-toggle="collapse" data-target=".property__paramDesc .collapse" title="private">
+<h2>$_paramDesc</h2>
+<pre>$_paramDesc </pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__return"> </a><div class="element clickable property private property__return" data-toggle="collapse" data-target=".property__return .collapse" title="private">
+<h2>$_return</h2>
+<pre>$_return </pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__returnDesc"> </a><div class="element clickable property private property__returnDesc" data-toggle="collapse" data-target=".property__returnDesc .collapse" title="private">
+<h2>$_returnDesc</h2>
+<pre>$_returnDesc </pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__sigParams"> </a><div class="element clickable property private property__sigParams" data-toggle="collapse" data-target=".property__sigParams .collapse" title="private">
+<h2>$_sigParams</h2>
+<pre>$_sigParams </pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__sigParamsDepth"> </a><div class="element clickable property private property__sigParamsDepth" data-toggle="collapse" data-target=".property__sigParamsDepth .collapse" title="private">
+<h2>$_sigParamsDepth</h2>
+<pre>$_sigParamsDepth </pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.8.5</a> and<br>
+            generated on 2015-11-23T12:38:54-06:00.<br></footer></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>Zend AMF API Documentation » \Zend_Amf_Request_Http</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">Zend AMF API Documentation</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Zend.html"><i class="icon-folder-open"></i> Zend</a></li>
+<li><a href="../packages/Zend_Amf.html"><i class="icon-folder-open"></i> Zend_Amf</a></li>
+<li><a href="../packages/Zend_Auth.html"><i class="icon-folder-open"></i> Zend_Auth</a></li>
+<li><a href="../packages/Zend_Date.html"><i class="icon-folder-open"></i> Zend_Date</a></li>
+<li><a href="../packages/Zend_Loader.html"><i class="icon-folder-open"></i> Zend_Loader</a></li>
+<li><a href="../packages/Zend_Server.html"><i class="icon-folder-open"></i> Zend_Server</a></li>
+<li><a href="../packages/Zend_Session.html"><i class="icon-folder-open"></i> Zend_Session</a></li>
+<li><a href="../packages/Zend_Version.html"><i class="icon-folder-open"></i> Zend_Version</a></li>
+</ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">77</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">5</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<div xmlns:php="http://php.net/xsl" class="btn-toolbar">
+<div class="btn-group visibility" data-toggle="buttons-checkbox">
+<button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button>
+</div>
+<div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+</div>
+<ul xmlns:php="http://php.net/xsl" class="side-nav nav nav-list">
+<li class="nav-header">
+<i title="Methods" class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method___construct" title="__construct() :: Constructor"><span class="description">Constructor</span><pre>__construct()</pre></a></li>
+<li class="method public inherited"><a href="#method_addAmfBody" title="addAmfBody() :: Accessor to private array of message bodies."><span class="description">Accessor to private array of message bodies.</span><pre>addAmfBody()</pre></a></li>
+<li class="method public inherited"><a href="#method_getAmfBodies" title="getAmfBodies() :: Return an array of the body objects that were found in the amf request."><span class="description">Return an array of the body objects that were found in the amf request.</span><pre>getAmfBodies()</pre></a></li>
+<li class="method public inherited"><a href="#method_getAmfHeaders" title="getAmfHeaders() :: Return an array of headers that were found in the amf request."><span class="description">Return an array of headers that were found in the amf request.</span><pre>getAmfHeaders()</pre></a></li>
+<li class="method public inherited"><a href="#method_getObjectEncoding" title="getObjectEncoding() :: Return the either 0 or 3 for respect AMF version"><span class="description">Return the either 0 or 3 for respect AMF version</span><pre>getObjectEncoding()</pre></a></li>
+<li class="method public "><a href="#method_getRawRequest" title="getRawRequest() :: Retrieve raw AMF Request"><span class="description">Retrieve raw AMF Request</span><pre>getRawRequest()</pre></a></li>
+<li class="method public inherited"><a href="#method_initialize" title="initialize() :: Prepare the AMF InputStream for parsing."><span class="description">Prepare the AMF InputStream for parsing.</span><pre>initialize()</pre></a></li>
+<li class="method public inherited"><a href="#method_readBody" title="readBody() :: Deserialize a message body from the input stream"><span class="description">Deserialize a message body from the input stream</span><pre>readBody()</pre></a></li>
+<li class="method public inherited"><a href="#method_readHeader" title="readHeader() :: Deserialize a message header from the input stream."><span class="description">Deserialize a message header from the input stream.</span><pre>readHeader()</pre></a></li>
+<li class="method public inherited"><a href="#method_readMessage" title="readMessage() :: Takes the raw AMF input stream and converts it into valid PHP objects"><span class="description">Takes the raw AMF input stream and converts it into valid PHP objects</span><pre>readMessage()</pre></a></li>
+<li class="method public inherited"><a href="#method_setObjectEncoding" title="setObjectEncoding() :: Set the object response encoding"><span class="description">Set the object response encoding</span><pre>setObjectEncoding()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i title="Properties" class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected "><a href="#property__bodies" title="$_bodies() :: "><span class="description">Message bodies</span><pre>$_bodies</pre></a></li>
+<li class="property protected "><a href="#property__clientType" title="$_clientType() :: "><span class="description">AMF client type (AMF0, AMF3)</span><pre>$_clientType</pre></a></li>
+<li class="property protected "><a href="#property__deserializer" title="$_deserializer() :: "><span class="description"></span><pre>$_deserializer</pre></a></li>
+<li class="property protected "><a href="#property__headers" title="$_headers() :: "><span class="description">Message headers</span><pre>$_headers</pre></a></li>
+<li class="property protected "><a href="#property__inputStream" title="$_inputStream() :: "><span class="description"></span><pre>$_inputStream</pre></a></li>
+<li class="property protected "><a href="#property__objectEncoding" title="$_objectEncoding() :: "><span class="description">Message encoding to use for objects in response</span><pre>$_objectEncoding</pre></a></li>
+<li class="property protected "><a href="#property__rawRequest" title="$_rawRequest() :: Raw AMF request"><span class="description"></span><pre>$_rawRequest</pre></a></li>
+<li class="property protected "><a href="#property__time" title="$_time() :: Time of the request"><span class="description"></span><pre>$_time</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a xmlns:php="http://php.net/xsl" id="\Zend_Amf_Request_Http"></a><ul xmlns:php="http://php.net/xsl" class="breadcrumb">
+<li>
+<a href="../index.html"><i title="Classes" class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Zend_Amf_Request_Http.html">Zend_Amf_Request_Http</a>
+</li>
+</ul>
+<div xmlns:php="http://php.net/xsl" class="element class">
+<p class="short_description">AMF Request object -- Request via HTTP</p>
+<div class="details">
+<div class="long_description"><p>Extends <a href="/classes/Zend_Amf_Request.html">Zend_Amf_Request</a> to accept a request via HTTP. Request is
+built at construction time using a raw POST; if no data is available, the
+request is declared a fault.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/Zend_Amf.Request.html">Zend_Amf</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Request</td>
+</tr>
+<tr>
+<th>copyright</th>
+<td>Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)</td>
+</tr>
+<tr>
+<th>license</th>
+<td><a href="http://framework.zend.com/license/new-bsd">New BSD License</a></td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend_Amf_Request</td>
+</tr>
+</table>
+<h3>
+<i title="Methods" class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___construct"></a><div class="element clickable method public method___construct " data-toggle="collapse" data-target=".method___construct .collapse" title="public">
+<h2>Constructor</h2>
+<pre>__construct() : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"><p>Attempts to read from php://input to get raw POST request; if an error
+occurs in doing so, or if the AMF body is invalid, the request is declared a
+fault.</p></div></div></div>
+</div>
+<a id="method_addAmfBody"></a><div class="element clickable method public method_addAmfBody inherited" data-toggle="collapse" data-target=".method_addAmfBody .collapse" title="public">
+<h2>Accessor to private array of message bodies.</h2>
+<pre>addAmfBody(\Zend_Amf_Value_MessageBody $message) : \Zend_Amf_Request</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$message</h4>
+<code>\Zend_Amf_Value_MessageBody</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend_Amf_Request</code></div>
+</div></div>
+</div>
+<a id="method_getAmfBodies"></a><div class="element clickable method public method_getAmfBodies inherited" data-toggle="collapse" data-target=".method_getAmfBodies .collapse" title="public">
+<h2>Return an array of the body objects that were found in the amf request.</h2>
+<pre>getAmfBodies() : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>{target, response, length, content}</div>
+</div></div>
+</div>
+<a id="method_getAmfHeaders"></a><div class="element clickable method public method_getAmfHeaders inherited" data-toggle="collapse" data-target=".method_getAmfHeaders .collapse" title="public">
+<h2>Return an array of headers that were found in the amf request.</h2>
+<pre>getAmfHeaders() : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>{operation, mustUnderstand, length, param}</div>
+</div></div>
+</div>
+<a id="method_getObjectEncoding"></a><div class="element clickable method public method_getObjectEncoding inherited" data-toggle="collapse" data-target=".method_getObjectEncoding .collapse" title="public">
+<h2>Return the either 0 or 3 for respect AMF version</h2>
+<pre>getObjectEncoding() : integer</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>integer</code></div>
+</div></div>
+</div>
+<a id="method_getRawRequest"></a><div class="element clickable method public method_getRawRequest " data-toggle="collapse" data-target=".method_getRawRequest .collapse" title="public">
+<h2>Retrieve raw AMF Request</h2>
+<pre>getRawRequest() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_initialize"></a><div class="element clickable method public method_initialize inherited" data-toggle="collapse" data-target=".method_initialize .collapse" title="public">
+<h2>Prepare the AMF InputStream for parsing.</h2>
+<pre>initialize(string $request) : \Zend_Amf_Request</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$request</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend_Amf_Request</code></div>
+</div></div>
+</div>
+<a id="method_readBody"></a><div class="element clickable method public method_readBody inherited" data-toggle="collapse" data-target=".method_readBody .collapse" title="public">
+<h2>Deserialize a message body from the input stream</h2>
+<pre>readBody() : \Zend_Amf_Value_MessageBody</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend_Amf_Value_MessageBody</code></div>
+</div></div>
+</div>
+<a id="method_readHeader"></a><div class="element clickable method public method_readHeader inherited" data-toggle="collapse" data-target=".method_readHeader .collapse" title="public">
+<h2>Deserialize a message header from the input stream.</h2>
+<pre>readHeader() : \Zend_Amf_Value_MessageHeader</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>A message header is structured as:</p>
+<ul>
+<li>NAME String</li>
+<li>MUST UNDERSTAND Boolean</li>
+<li>LENGTH Int</li>
+<li>DATA Object</li>
+</ul></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend_Amf_Value_MessageHeader</code></div>
+</div></div>
+</div>
+<a id="method_readMessage"></a><div class="element clickable method public method_readMessage inherited" data-toggle="collapse" data-target=".method_readMessage .collapse" title="public">
+<h2>Takes the raw AMF input stream and converts it into valid PHP objects</h2>
+<pre>readMessage(\Zend_Amf_Parse_InputStream $stream) : \Zend_Amf_Request</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$stream</h4></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend_Amf_Request</code></div>
+</div></div>
+</div>
+<a id="method_setObjectEncoding"></a><div class="element clickable method public method_setObjectEncoding inherited" data-toggle="collapse" data-target=".method_setObjectEncoding .collapse" title="public">
+<h2>Set the object response encoding</h2>
+<pre>setObjectEncoding(mixed $int) : \Zend_Amf_Request</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$int</h4>
+<code>mixed</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend_Amf_Request</code></div>
+</div></div>
+</div>
+<h3>
+<i title="Properties" class="icon-custom icon-property"></i> Properties</h3>
+<a id="property__bodies"> </a><div class="element clickable property protected property__bodies" data-toggle="collapse" data-target=".property__bodies .collapse" title="protected">
+<h2>Message bodies</h2>
+<pre>$_bodies : array</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>array()</code></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__clientType"> </a><div class="element clickable property protected property__clientType" data-toggle="collapse" data-target=".property__clientType .collapse" title="protected">
+<h2>AMF client type (AMF0, AMF3)</h2>
+<pre>$_clientType : integer</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>0</code></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__deserializer"> </a><div class="element clickable property protected property__deserializer" data-toggle="collapse" data-target=".property__deserializer .collapse" title="protected">
+<h2>$_deserializer</h2>
+<pre>$_deserializer : \Zend_Amf_Parse_AMF0_Deserializer</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__headers"> </a><div class="element clickable property protected property__headers" data-toggle="collapse" data-target=".property__headers .collapse" title="protected">
+<h2>Message headers</h2>
+<pre>$_headers : array</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>array()</code></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__inputStream"> </a><div class="element clickable property protected property__inputStream" data-toggle="collapse" data-target=".property__inputStream .collapse" title="protected">
+<h2>$_inputStream</h2>
+<pre>$_inputStream : \Zend_Amf_Parse_InputStream</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__objectEncoding"> </a><div class="element clickable property protected property__objectEncoding" data-toggle="collapse" data-target=".property__objectEncoding .collapse" title="protected">
+<h2>Message encoding to use for objects in response</h2>
+<pre>$_objectEncoding : integer</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>0</code></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__rawRequest"> </a><div class="element clickable property protected property__rawRequest" data-toggle="collapse" data-target=".property__rawRequest .collapse" title="protected">
+<h2>Raw AMF request</h2>
+<pre>$_rawRequest : string</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__time"> </a><div class="element clickable property protected property__time" data-toggle="collapse" data-target=".property__time .collapse" title="protected">
+<h2>Time of the request</h2>
+<pre>$_time : mixed</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.8.5</a> and<br>
+            generated on 2015-11-23T12:38:53-06:00.<br></footer></div>
+</div>
+</body>
+</html>

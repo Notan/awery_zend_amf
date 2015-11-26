@@ -1,0 +1,618 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>Zend AMF API Documentation » \Zend_Loader_Autoloader</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">Zend AMF API Documentation</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Zend.html"><i class="icon-folder-open"></i> Zend</a></li>
+<li><a href="../packages/Zend_Amf.html"><i class="icon-folder-open"></i> Zend_Amf</a></li>
+<li><a href="../packages/Zend_Auth.html"><i class="icon-folder-open"></i> Zend_Auth</a></li>
+<li><a href="../packages/Zend_Date.html"><i class="icon-folder-open"></i> Zend_Date</a></li>
+<li><a href="../packages/Zend_Loader.html"><i class="icon-folder-open"></i> Zend_Loader</a></li>
+<li><a href="../packages/Zend_Server.html"><i class="icon-folder-open"></i> Zend_Server</a></li>
+<li><a href="../packages/Zend_Session.html"><i class="icon-folder-open"></i> Zend_Session</a></li>
+<li><a href="../packages/Zend_Version.html"><i class="icon-folder-open"></i> Zend_Version</a></li>
+</ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">77</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">5</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<div xmlns:php="http://php.net/xsl" class="btn-toolbar">
+<div class="btn-group visibility" data-toggle="buttons-checkbox">
+<button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button>
+</div>
+<div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+</div>
+<ul xmlns:php="http://php.net/xsl" class="side-nav nav nav-list">
+<li class="nav-header">
+<i title="Methods" class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method_autoload" title="autoload() :: Autoload a class"><span class="description">Autoload a class</span><pre>autoload()</pre></a></li>
+<li class="method public "><a href="#method_getAutoloaders" title="getAutoloaders() :: Get attached autoloader implementations"><span class="description">Get attached autoloader implementations</span><pre>getAutoloaders()</pre></a></li>
+<li class="method public "><a href="#method_getClassAutoloaders" title="getClassAutoloaders() :: Get autoloaders to use when matching class"><span class="description">Get autoloaders to use when matching class</span><pre>getClassAutoloaders()</pre></a></li>
+<li class="method public "><a href="#method_getDefaultAutoloader" title="getDefaultAutoloader() :: Retrieve the default autoloader callback"><span class="description">Retrieve the default autoloader callback</span><pre>getDefaultAutoloader()</pre></a></li>
+<li class="method public "><a href="#method_getInstance" title="getInstance() :: Retrieve singleton instance"><span class="description">Retrieve singleton instance</span><pre>getInstance()</pre></a></li>
+<li class="method public "><a href="#method_getNamespaceAutoloaders" title="getNamespaceAutoloaders() :: Return all autoloaders for a given namespace"><span class="description">Return all autoloaders for a given namespace</span><pre>getNamespaceAutoloaders()</pre></a></li>
+<li class="method public "><a href="#method_getRegisteredNamespaces" title="getRegisteredNamespaces() :: Get a list of registered autoload namespaces"><span class="description">Get a list of registered autoload namespaces</span><pre>getRegisteredNamespaces()</pre></a></li>
+<li class="method public "><a href="#method_getZfPath" title="getZfPath() :: "><span class="description">getZfPath()
+        </span><pre>getZfPath()</pre></a></li>
+<li class="method public "><a href="#method_isFallbackAutoloader" title="isFallbackAutoloader() :: Is this instance acting as a fallback autoloader?"><span class="description">Is this instance acting as a fallback autoloader?</span><pre>isFallbackAutoloader()</pre></a></li>
+<li class="method public "><a href="#method_pushAutoloader" title="pushAutoloader() :: Append an autoloader to the autoloader stack"><span class="description">Append an autoloader to the autoloader stack</span><pre>pushAutoloader()</pre></a></li>
+<li class="method public "><a href="#method_registerNamespace" title="registerNamespace() :: Register a namespace to autoload"><span class="description">Register a namespace to autoload</span><pre>registerNamespace()</pre></a></li>
+<li class="method public "><a href="#method_removeAutoloader" title="removeAutoloader() :: Remove an autoloader from the autoloader stack"><span class="description">Remove an autoloader from the autoloader stack</span><pre>removeAutoloader()</pre></a></li>
+<li class="method public "><a href="#method_resetInstance" title="resetInstance() :: Reset the singleton instance"><span class="description">Reset the singleton instance</span><pre>resetInstance()</pre></a></li>
+<li class="method public "><a href="#method_setAutoloaders" title="setAutoloaders() :: Set several autoloader callbacks at once"><span class="description">Set several autoloader callbacks at once</span><pre>setAutoloaders()</pre></a></li>
+<li class="method public "><a href="#method_setDefaultAutoloader" title="setDefaultAutoloader() :: Set the default autoloader implementation"><span class="description">Set the default autoloader implementation</span><pre>setDefaultAutoloader()</pre></a></li>
+<li class="method public "><a href="#method_setFallbackAutoloader" title="setFallbackAutoloader() :: Indicate whether or not this autoloader should be a fallback autoloader"><span class="description">Indicate whether or not this autoloader should be a fallback autoloader</span><pre>setFallbackAutoloader()</pre></a></li>
+<li class="method public "><a href="#method_setZfPath" title="setZfPath() :: "><span class="description">setZfPath()
+        </span><pre>setZfPath()</pre></a></li>
+<li class="method public "><a href="#method_suppressNotFoundWarnings" title='suppressNotFoundWarnings() :: Get or set the value of the "suppress not found warnings" flag'><span class="description">Get or set the value of the "suppress not found warnings" flag</span><pre>suppressNotFoundWarnings()</pre></a></li>
+<li class="method public "><a href="#method_unregisterNamespace" title="unregisterNamespace() :: Unload a registered autoload namespace"><span class="description">Unload a registered autoload namespace</span><pre>unregisterNamespace()</pre></a></li>
+<li class="method public "><a href="#method_unshiftAutoloader" title="unshiftAutoloader() :: Add an autoloader to the beginning of the stack"><span class="description">Add an autoloader to the beginning of the stack</span><pre>unshiftAutoloader()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="method protected "><a href="#method___construct" title="__construct() :: Constructor"><span class="description">Constructor</span><pre>__construct()</pre></a></li>
+<li class="method protected "><a href="#method__autoload" title="_autoload() :: Internal autoloader implementation"><span class="description">Internal autoloader implementation</span><pre>_autoload()</pre></a></li>
+<li class="method protected "><a href="#method__getAvailableVersions" title="_getAvailableVersions() :: Get available versions for the version type requested"><span class="description">Get available versions for the version type requested</span><pre>_getAvailableVersions()</pre></a></li>
+<li class="method protected "><a href="#method__getVersionPath" title="_getVersionPath() :: Retrieve the filesystem path for the requested ZF version"><span class="description">Retrieve the filesystem path for the requested ZF version</span><pre>_getVersionPath()</pre></a></li>
+<li class="method protected "><a href="#method__getVersionType" title="_getVersionType() :: Retrieve the ZF version type"><span class="description">Retrieve the ZF version type</span><pre>_getVersionType()</pre></a></li>
+<li class="method protected "><a href="#method__setNamespaceAutoloaders" title="_setNamespaceAutoloaders() :: Set autoloaders for a specific namespace"><span class="description">Set autoloaders for a specific namespace</span><pre>_setNamespaceAutoloaders()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i title="Properties" class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected "><a href="#property__autoloaders" title="$_autoloaders() :: "><span class="description">Concrete autoloader callback implementations</span><pre>$_autoloaders</pre></a></li>
+<li class="property protected "><a href="#property__defaultAutoloader" title="$_defaultAutoloader() :: "><span class="description">Default autoloader callback</span><pre>$_defaultAutoloader</pre></a></li>
+<li class="property protected "><a href="#property__fallbackAutoloader" title="$_fallbackAutoloader() :: "><span class="description">Whether or not to act as a fallback autoloader</span><pre>$_fallbackAutoloader</pre></a></li>
+<li class="property protected "><a href="#property__instance" title="$_instance() :: "><span class="description">Singleton instance</span><pre>$_instance</pre></a></li>
+<li class="property protected "><a href="#property__internalAutoloader" title="$_internalAutoloader() :: "><span class="description">Callback for internal autoloader implementation</span><pre>$_internalAutoloader</pre></a></li>
+<li class="property protected "><a href="#property__namespaceAutoloaders" title="$_namespaceAutoloaders() :: "><span class="description">Namespace-specific autoloaders</span><pre>$_namespaceAutoloaders</pre></a></li>
+<li class="property protected "><a href="#property__namespaces" title="$_namespaces() :: "><span class="description">Supported namespaces 'Zend' and 'ZendX' by default.</span><pre>$_namespaces</pre></a></li>
+<li class="property protected "><a href="#property__suppressNotFoundWarnings" title="$_suppressNotFoundWarnings() :: "><span class="description">Whether or not to suppress file not found warnings</span><pre>$_suppressNotFoundWarnings</pre></a></li>
+<li class="property protected "><a href="#property__zfPath" title="$_zfPath() :: "><span class="description"></span><pre>$_zfPath</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a xmlns:php="http://php.net/xsl" id="\Zend_Loader_Autoloader"></a><ul xmlns:php="http://php.net/xsl" class="breadcrumb">
+<li>
+<a href="../index.html"><i title="Classes" class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Zend_Loader_Autoloader.html">Zend_Loader_Autoloader</a>
+</li>
+</ul>
+<div xmlns:php="http://php.net/xsl" class="element class">
+<p class="short_description">Autoloader stack and namespace autoloader</p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>uses</th>
+<td><a href="Zend_Loader_Autoloader"></a></td>
+</tr>
+<tr>
+<th>package</th>
+<td><a href="../packages/Zend_Loader.Autoloader.html">Zend_Loader</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Autoloader</td>
+</tr>
+<tr>
+<th>copyright</th>
+<td>Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)</td>
+</tr>
+<tr>
+<th>license</th>
+<td><a href="http://framework.zend.com/license/new-bsd">New BSD License</a></td>
+</tr>
+</table>
+<h3>
+<i title="Methods" class="icon-custom icon-method"></i> Methods</h3>
+<a id="method_autoload"></a><div class="element clickable method public method_autoload " data-toggle="collapse" data-target=".method_autoload .collapse" title="public">
+<h2>Autoload a class</h2>
+<pre>autoload(string $class) : boolean</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$class</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a id="method_getAutoloaders"></a><div class="element clickable method public method_getAutoloaders " data-toggle="collapse" data-target=".method_getAutoloaders .collapse" title="public">
+<h2>Get attached autoloader implementations</h2>
+<pre>getAutoloaders() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_getClassAutoloaders"></a><div class="element clickable method public method_getClassAutoloaders " data-toggle="collapse" data-target=".method_getClassAutoloaders .collapse" title="public">
+<h2>Get autoloaders to use when matching class</h2>
+<pre>getClassAutoloaders(string $class) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Determines if the class matches a registered namespace, and, if so,
+returns only the autoloaders for that namespace. Otherwise, it returns
+all non-namespaced autoloaders.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$class</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>Array of autoloaders to use</div>
+</div></div>
+</div>
+<a id="method_getDefaultAutoloader"></a><div class="element clickable method public method_getDefaultAutoloader " data-toggle="collapse" data-target=".method_getDefaultAutoloader .collapse" title="public">
+<h2>Retrieve the default autoloader callback</h2>
+<pre>getDefaultAutoloader() : string | array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code><code>array</code>PHP Callback</div>
+</div></div>
+</div>
+<a id="method_getInstance"></a><div class="element clickable method public method_getInstance " data-toggle="collapse" data-target=".method_getInstance .collapse" title="public">
+<h2>Retrieve singleton instance</h2>
+<pre>getInstance() : \Zend_Loader_Autoloader</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend_Loader_Autoloader</code></div>
+</div></div>
+</div>
+<a id="method_getNamespaceAutoloaders"></a><div class="element clickable method public method_getNamespaceAutoloaders " data-toggle="collapse" data-target=".method_getNamespaceAutoloaders .collapse" title="public">
+<h2>Return all autoloaders for a given namespace</h2>
+<pre>getNamespaceAutoloaders(string $namespace) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$namespace</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_getRegisteredNamespaces"></a><div class="element clickable method public method_getRegisteredNamespaces " data-toggle="collapse" data-target=".method_getRegisteredNamespaces .collapse" title="public">
+<h2>Get a list of registered autoload namespaces</h2>
+<pre>getRegisteredNamespaces() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_getZfPath"></a><div class="element clickable method public method_getZfPath " data-toggle="collapse" data-target=".method_getZfPath .collapse" title="public">
+<h2>getZfPath()
+        </h2>
+<pre>getZfPath() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_isFallbackAutoloader"></a><div class="element clickable method public method_isFallbackAutoloader " data-toggle="collapse" data-target=".method_isFallbackAutoloader .collapse" title="public">
+<h2>Is this instance acting as a fallback autoloader?</h2>
+<pre>isFallbackAutoloader() : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a id="method_pushAutoloader"></a><div class="element clickable method public method_pushAutoloader " data-toggle="collapse" data-target=".method_pushAutoloader .collapse" title="public">
+<h2>Append an autoloader to the autoloader stack</h2>
+<pre>pushAutoloader(object|array|string $callback, string|array $namespace<code> = ''</code>) : \Zend_Loader_Autoloader</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$callback</h4>
+<code>object</code><code>array</code><code>string</code><p>PHP callback or Zend_Loader_Autoloader_Interface implementation</p></div>
+<div class="subelement argument">
+<h4>$namespace</h4>
+<code>string</code><code>array</code><p>Specific namespace(s) under which to register callback</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend_Loader_Autoloader</code></div>
+</div></div>
+</div>
+<a id="method_registerNamespace"></a><div class="element clickable method public method_registerNamespace " data-toggle="collapse" data-target=".method_registerNamespace .collapse" title="public">
+<h2>Register a namespace to autoload</h2>
+<pre>registerNamespace(string|array $namespace) : \Zend_Loader_Autoloader</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$namespace</h4>
+<code>string</code><code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend_Loader_Autoloader</code></div>
+</div></div>
+</div>
+<a id="method_removeAutoloader"></a><div class="element clickable method public method_removeAutoloader " data-toggle="collapse" data-target=".method_removeAutoloader .collapse" title="public">
+<h2>Remove an autoloader from the autoloader stack</h2>
+<pre>removeAutoloader(object|array|string $callback, null|string|array $namespace<code> = null</code>) : \Zend_Loader_Autoloader</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$callback</h4>
+<code>object</code><code>array</code><code>string</code><p>PHP callback or Zend_Loader_Autoloader_Interface implementation</p></div>
+<div class="subelement argument">
+<h4>$namespace</h4>
+<code>null</code><code>string</code><code>array</code><p>Specific namespace(s) from which to remove autoloader</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend_Loader_Autoloader</code></div>
+</div></div>
+</div>
+<a id="method_resetInstance"></a><div class="element clickable method public method_resetInstance " data-toggle="collapse" data-target=".method_resetInstance .collapse" title="public">
+<h2>Reset the singleton instance</h2>
+<pre>resetInstance() : void</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_setAutoloaders"></a><div class="element clickable method public method_setAutoloaders " data-toggle="collapse" data-target=".method_setAutoloaders .collapse" title="public">
+<h2>Set several autoloader callbacks at once</h2>
+<pre>setAutoloaders(array $autoloaders) : \Zend_Loader_Autoloader</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$autoloaders</h4>
+<code>array</code><p>Array of PHP callbacks (or Zend_Loader_Autoloader_Interface implementations) to act as autoloaders</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend_Loader_Autoloader</code></div>
+</div></div>
+</div>
+<a id="method_setDefaultAutoloader"></a><div class="element clickable method public method_setDefaultAutoloader " data-toggle="collapse" data-target=".method_setDefaultAutoloader .collapse" title="public">
+<h2>Set the default autoloader implementation</h2>
+<pre>setDefaultAutoloader(string|array $callback) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$callback</h4>
+<code>string</code><code>array</code><p>PHP callback</p></div>
+</div></div>
+</div>
+<a id="method_setFallbackAutoloader"></a><div class="element clickable method public method_setFallbackAutoloader " data-toggle="collapse" data-target=".method_setFallbackAutoloader .collapse" title="public">
+<h2>Indicate whether or not this autoloader should be a fallback autoloader</h2>
+<pre>setFallbackAutoloader(boolean $flag) : \Zend_Loader_Autoloader</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$flag</h4>
+<code>boolean</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend_Loader_Autoloader</code></div>
+</div></div>
+</div>
+<a id="method_setZfPath"></a><div class="element clickable method public method_setZfPath " data-toggle="collapse" data-target=".method_setZfPath .collapse" title="public">
+<h2>setZfPath()
+        </h2>
+<pre>setZfPath($spec, $version<code> = 'latest'</code>) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$spec</h4></div>
+<div class="subelement argument"><h4>$version</h4></div>
+</div></div>
+</div>
+<a id="method_suppressNotFoundWarnings"></a><div class="element clickable method public method_suppressNotFoundWarnings " data-toggle="collapse" data-target=".method_suppressNotFoundWarnings .collapse" title="public">
+<h2>Get or set the value of the "suppress not found warnings" flag</h2>
+<pre>suppressNotFoundWarnings(null|boolean $flag<code> = null</code>) : boolean | \Zend_Loader_Autoloader</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$flag</h4>
+<code>null</code><code>boolean</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>boolean</code><code>\Zend_Loader_Autoloader</code>Returns boolean if no argument is passed, object instance otherwise</div>
+</div></div>
+</div>
+<a id="method_unregisterNamespace"></a><div class="element clickable method public method_unregisterNamespace " data-toggle="collapse" data-target=".method_unregisterNamespace .collapse" title="public">
+<h2>Unload a registered autoload namespace</h2>
+<pre>unregisterNamespace(string|array $namespace) : \Zend_Loader_Autoloader</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$namespace</h4>
+<code>string</code><code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend_Loader_Autoloader</code></div>
+</div></div>
+</div>
+<a id="method_unshiftAutoloader"></a><div class="element clickable method public method_unshiftAutoloader " data-toggle="collapse" data-target=".method_unshiftAutoloader .collapse" title="public">
+<h2>Add an autoloader to the beginning of the stack</h2>
+<pre>unshiftAutoloader(object|array|string $callback, string|array $namespace<code> = ''</code>) : \Zend_Loader_Autoloader</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$callback</h4>
+<code>object</code><code>array</code><code>string</code><p>PHP callback or Zend_Loader_Autoloader_Interface implementation</p></div>
+<div class="subelement argument">
+<h4>$namespace</h4>
+<code>string</code><code>array</code><p>Specific namespace(s) under which to register callback</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend_Loader_Autoloader</code></div>
+</div></div>
+</div>
+<a id="method___construct"></a><div class="element clickable method protected method___construct " data-toggle="collapse" data-target=".method___construct .collapse" title="protected">
+<h2>Constructor</h2>
+<pre>__construct() : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"><p>Registers instance with spl_autoload stack</p></div></div></div>
+</div>
+<a id="method__autoload"></a><div class="element clickable method protected method__autoload " data-toggle="collapse" data-target=".method__autoload .collapse" title="protected">
+<h2>Internal autoloader implementation</h2>
+<pre>_autoload(string $class) : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$class</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a id="method__getAvailableVersions"></a><div class="element clickable method protected method__getAvailableVersions " data-toggle="collapse" data-target=".method__getAvailableVersions .collapse" title="protected">
+<h2>Get available versions for the version type requested</h2>
+<pre>_getAvailableVersions(string $path, string $version) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$path</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$version</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method__getVersionPath"></a><div class="element clickable method protected method__getVersionPath " data-toggle="collapse" data-target=".method__getVersionPath .collapse" title="protected">
+<h2>Retrieve the filesystem path for the requested ZF version</h2>
+<pre>_getVersionPath(string $path, string $version) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$path</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$version</h4>
+<code>string</code>
+</div>
+</div></div>
+</div>
+<a id="method__getVersionType"></a><div class="element clickable method protected method__getVersionType " data-toggle="collapse" data-target=".method__getVersionType .collapse" title="protected">
+<h2>Retrieve the ZF version type</h2>
+<pre>_getVersionType(string $version) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$version</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code>\Zend_Loader_Exception</code></th>
+<td>if version string contains too many dots</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>"latest", "major", "minor", or "specific"</div>
+</div></div>
+</div>
+<a id="method__setNamespaceAutoloaders"></a><div class="element clickable method protected method__setNamespaceAutoloaders " data-toggle="collapse" data-target=".method__setNamespaceAutoloaders .collapse" title="protected">
+<h2>Set autoloaders for a specific namespace</h2>
+<pre>_setNamespaceAutoloaders(array $autoloaders, string $namespace<code> = ''</code>) : \Zend_Loader_Autoloader</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$autoloaders</h4>
+<code>array</code>
+</div>
+<div class="subelement argument">
+<h4>$namespace</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend_Loader_Autoloader</code></div>
+</div></div>
+</div>
+<h3>
+<i title="Properties" class="icon-custom icon-property"></i> Properties</h3>
+<a id="property__autoloaders"> </a><div class="element clickable property protected property__autoloaders" data-toggle="collapse" data-target=".property__autoloaders .collapse" title="protected">
+<h2>Concrete autoloader callback implementations</h2>
+<pre>$_autoloaders : array</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>array()</code></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__defaultAutoloader"> </a><div class="element clickable property protected property__defaultAutoloader" data-toggle="collapse" data-target=".property__defaultAutoloader .collapse" title="protected">
+<h2>Default autoloader callback</h2>
+<pre>$_defaultAutoloader : array</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>array('Zend_Loader', 'loadClass')</code></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__fallbackAutoloader"> </a><div class="element clickable property protected property__fallbackAutoloader" data-toggle="collapse" data-target=".property__fallbackAutoloader .collapse" title="protected">
+<h2>Whether or not to act as a fallback autoloader</h2>
+<pre>$_fallbackAutoloader : boolean</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>false</code></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__instance"> </a><div class="element clickable property protected property__instance" data-toggle="collapse" data-target=".property__instance .collapse" title="protected">
+<h2>Singleton instance</h2>
+<pre>$_instance : \Zend_Loader_Autoloader</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__internalAutoloader"> </a><div class="element clickable property protected property__internalAutoloader" data-toggle="collapse" data-target=".property__internalAutoloader .collapse" title="protected">
+<h2>Callback for internal autoloader implementation</h2>
+<pre>$_internalAutoloader : array</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__namespaceAutoloaders"> </a><div class="element clickable property protected property__namespaceAutoloaders" data-toggle="collapse" data-target=".property__namespaceAutoloaders .collapse" title="protected">
+<h2>Namespace-specific autoloaders</h2>
+<pre>$_namespaceAutoloaders : array</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>array()</code></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__namespaces"> </a><div class="element clickable property protected property__namespaces" data-toggle="collapse" data-target=".property__namespaces .collapse" title="protected">
+<h2>Supported namespaces 'Zend' and 'ZendX' by default.</h2>
+<pre>$_namespaces : array</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>array('Zend_' => true, 'ZendX_' => true)</code></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__suppressNotFoundWarnings"> </a><div class="element clickable property protected property__suppressNotFoundWarnings" data-toggle="collapse" data-target=".property__suppressNotFoundWarnings .collapse" title="protected">
+<h2>Whether or not to suppress file not found warnings</h2>
+<pre>$_suppressNotFoundWarnings : boolean</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>false</code></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__zfPath"> </a><div class="element clickable property protected property__zfPath" data-toggle="collapse" data-target=".property__zfPath .collapse" title="protected">
+<h2>$_zfPath</h2>
+<pre>$_zfPath : null | string</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.8.5</a> and<br>
+            generated on 2015-11-23T12:38:53-06:00.<br></footer></div>
+</div>
+</body>
+</html>

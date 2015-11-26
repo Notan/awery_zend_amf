@@ -1,0 +1,497 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>Zend AMF API Documentation » \Zend_Loader_PluginLoader</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">Zend AMF API Documentation</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Zend.html"><i class="icon-folder-open"></i> Zend</a></li>
+<li><a href="../packages/Zend_Amf.html"><i class="icon-folder-open"></i> Zend_Amf</a></li>
+<li><a href="../packages/Zend_Auth.html"><i class="icon-folder-open"></i> Zend_Auth</a></li>
+<li><a href="../packages/Zend_Date.html"><i class="icon-folder-open"></i> Zend_Date</a></li>
+<li><a href="../packages/Zend_Loader.html"><i class="icon-folder-open"></i> Zend_Loader</a></li>
+<li><a href="../packages/Zend_Server.html"><i class="icon-folder-open"></i> Zend_Server</a></li>
+<li><a href="../packages/Zend_Session.html"><i class="icon-folder-open"></i> Zend_Session</a></li>
+<li><a href="../packages/Zend_Version.html"><i class="icon-folder-open"></i> Zend_Version</a></li>
+</ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">77</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">5</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<div xmlns:php="http://php.net/xsl" class="btn-toolbar">
+<div class="btn-group visibility" data-toggle="buttons-checkbox">
+<button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button>
+</div>
+<div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+</div>
+<ul xmlns:php="http://php.net/xsl" class="side-nav nav nav-list">
+<li class="nav-header">
+<i title="Methods" class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method___construct" title="__construct() :: Constructor"><span class="description">Constructor</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method_addPrefixPath" title="addPrefixPath() :: Add prefixed paths to the registry of paths"><span class="description">Add prefixed paths to the registry of paths</span><pre>addPrefixPath()</pre></a></li>
+<li class="method public "><a href="#method_clearPaths" title="clearPaths() :: Clear path stack"><span class="description">Clear path stack</span><pre>clearPaths()</pre></a></li>
+<li class="method public "><a href="#method_getClassName" title="getClassName() :: Return full class name for a named plugin"><span class="description">Return full class name for a named plugin</span><pre>getClassName()</pre></a></li>
+<li class="method public "><a href="#method_getClassPath" title="getClassPath() :: Get path to plugin class"><span class="description">Get path to plugin class</span><pre>getClassPath()</pre></a></li>
+<li class="method public "><a href="#method_getIncludeFileCache" title="getIncludeFileCache() :: Retrieve class file cache path"><span class="description">Retrieve class file cache path</span><pre>getIncludeFileCache()</pre></a></li>
+<li class="method public "><a href="#method_getPaths" title="getPaths() :: Get path stack"><span class="description">Get path stack</span><pre>getPaths()</pre></a></li>
+<li class="method public "><a href="#method_isLoaded" title="isLoaded() :: Whether or not a Plugin by a specific name is loaded"><span class="description">Whether or not a Plugin by a specific name is loaded</span><pre>isLoaded()</pre></a></li>
+<li class="method public "><a href="#method_load" title="load() :: Load a plugin via the name provided"><span class="description">Load a plugin via the name provided</span><pre>load()</pre></a></li>
+<li class="method public "><a href="#method_removePrefixPath" title="removePrefixPath() :: Remove a prefix (or prefixed-path) from the registry"><span class="description">Remove a prefix (or prefixed-path) from the registry</span><pre>removePrefixPath()</pre></a></li>
+<li class="method public "><a href="#method_setIncludeFileCache" title="setIncludeFileCache() :: Set path to class file cache"><span class="description">Set path to class file cache</span><pre>setIncludeFileCache()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="method protected "><a href="#method__appendIncFile" title="_appendIncFile() :: Append an include_once statement to the class file cache"><span class="description">Append an include_once statement to the class file cache</span><pre>_appendIncFile()</pre></a></li>
+<li class="method protected "><a href="#method__formatName" title="_formatName() :: Normalize plugin name"><span class="description">Normalize plugin name</span><pre>_formatName()</pre></a></li>
+<li class="method protected "><a href="#method__formatPrefix" title="_formatPrefix() :: Format prefix for internal use"><span class="description">Format prefix for internal use</span><pre>_formatPrefix()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i title="Properties" class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected "><a href="#property__includeFileCache" title="$_includeFileCache() :: Class map cache file"><span class="description"></span><pre>$_includeFileCache</pre></a></li>
+<li class="property protected "><a href="#property__includeFileCacheHandler" title="$_includeFileCacheHandler() :: Class map cache file handler"><span class="description"></span><pre>$_includeFileCacheHandler</pre></a></li>
+<li class="property protected "><a href="#property__loadedPluginPaths" title="$_loadedPluginPaths() :: Instance loaded plugin paths"><span class="description"></span><pre>$_loadedPluginPaths</pre></a></li>
+<li class="property protected "><a href="#property__loadedPlugins" title="$_loadedPlugins() :: Instance loaded plugins"><span class="description"></span><pre>$_loadedPlugins</pre></a></li>
+<li class="property protected "><a href="#property__prefixToPaths" title="$_prefixToPaths() :: Instance registry property"><span class="description"></span><pre>$_prefixToPaths</pre></a></li>
+<li class="property protected "><a href="#property__staticLoadedPluginPaths" title="$_staticLoadedPluginPaths() :: Statically loaded plugin path mappings"><span class="description"></span><pre>$_staticLoadedPluginPaths</pre></a></li>
+<li class="property protected "><a href="#property__staticLoadedPlugins" title="$_staticLoadedPlugins() :: Statically loaded plugins"><span class="description"></span><pre>$_staticLoadedPlugins</pre></a></li>
+<li class="property protected "><a href="#property__staticPrefixToPaths" title="$_staticPrefixToPaths() :: Static registry property"><span class="description"></span><pre>$_staticPrefixToPaths</pre></a></li>
+<li class="property protected "><a href="#property__useStaticRegistry" title="$_useStaticRegistry() :: Whether to use a statically named registry for loading plugins"><span class="description"></span><pre>$_useStaticRegistry</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a xmlns:php="http://php.net/xsl" id="\Zend_Loader_PluginLoader"></a><ul xmlns:php="http://php.net/xsl" class="breadcrumb">
+<li>
+<a href="../index.html"><i title="Classes" class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Zend_Loader_PluginLoader.html">Zend_Loader_PluginLoader</a>
+</li>
+</ul>
+<div xmlns:php="http://php.net/xsl" class="element class">
+<p class="short_description">Generic plugin class loader</p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>category</th>
+<td>Zend</td>
+</tr>
+<tr>
+<th>package</th>
+<td><a href="../packages/Zend_Loader.PluginLoader.html">Zend_Loader</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>PluginLoader</td>
+</tr>
+<tr>
+<th>copyright</th>
+<td>Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)</td>
+</tr>
+<tr>
+<th>license</th>
+<td><a href="http://framework.zend.com/license/new-bsd">New BSD License</a></td>
+</tr>
+</table>
+<h3>
+<i title="Methods" class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___construct"></a><div class="element clickable method public method___construct " data-toggle="collapse" data-target=".method___construct .collapse" title="public">
+<h2>Constructor</h2>
+<pre>__construct(array $prefixToPaths<code> = array()</code>, string $staticRegistryName<code> = null</code>) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$prefixToPaths</h4>
+<code>array</code>
+</div>
+<div class="subelement argument">
+<h4>$staticRegistryName</h4>
+<code>string</code><p>OPTIONAL</p></div>
+</div></div>
+</div>
+<a id="method_addPrefixPath"></a><div class="element clickable method public method_addPrefixPath " data-toggle="collapse" data-target=".method_addPrefixPath .collapse" title="public">
+<h2>Add prefixed paths to the registry of paths</h2>
+<pre>addPrefixPath(string $prefix, string $path) : \Zend_Loader_PluginLoader</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend_Loader_PluginLoader_Interface::addPrefixPath()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$prefix</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$path</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend_Loader_PluginLoader</code></div>
+</div></div>
+</div>
+<a id="method_clearPaths"></a><div class="element clickable method public method_clearPaths " data-toggle="collapse" data-target=".method_clearPaths .collapse" title="public">
+<h2>Clear path stack</h2>
+<pre>clearPaths(string $prefix<code> = null</code>) : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$prefix</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>boolean</code>False only if $prefix does not exist</div>
+</div></div>
+</div>
+<a id="method_getClassName"></a><div class="element clickable method public method_getClassName " data-toggle="collapse" data-target=".method_getClassName .collapse" title="public">
+<h2>Return full class name for a named plugin</h2>
+<pre>getClassName(string $name) : string | false</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend_Loader_PluginLoader_Interface::getClassName()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code><code>false</code>False if class not found, class name otherwise</div>
+</div></div>
+</div>
+<a id="method_getClassPath"></a><div class="element clickable method public method_getClassPath " data-toggle="collapse" data-target=".method_getClassPath .collapse" title="public">
+<h2>Get path to plugin class</h2>
+<pre>getClassPath(mixed $name) : string | false</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>mixed</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code><code>false</code>False if not found</div>
+</div></div>
+</div>
+<a id="method_getIncludeFileCache"></a><div class="element clickable method public method_getIncludeFileCache " data-toggle="collapse" data-target=".method_getIncludeFileCache .collapse" title="public">
+<h2>Retrieve class file cache path</h2>
+<pre>getIncludeFileCache() : string | null</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code><code>null</code>
+</div>
+</div></div>
+</div>
+<a id="method_getPaths"></a><div class="element clickable method public method_getPaths " data-toggle="collapse" data-target=".method_getPaths .collapse" title="public">
+<h2>Get path stack</h2>
+<pre>getPaths(string $prefix<code> = null</code>) : false | array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$prefix</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>false</code><code>array</code>False if prefix does not exist, array otherwise</div>
+</div></div>
+</div>
+<a id="method_isLoaded"></a><div class="element clickable method public method_isLoaded " data-toggle="collapse" data-target=".method_isLoaded .collapse" title="public">
+<h2>Whether or not a Plugin by a specific name is loaded</h2>
+<pre>isLoaded(string $name) : \Zend_Loader_PluginLoader</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend_Loader_PluginLoader_Interface::isLoaded()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend_Loader_PluginLoader</code></div>
+</div></div>
+</div>
+<a id="method_load"></a><div class="element clickable method public method_load " data-toggle="collapse" data-target=".method_load .collapse" title="public">
+<h2>Load a plugin via the name provided</h2>
+<pre>load(string $name, boolean $throwExceptions<code> = true</code>) : string | false</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend_Loader_PluginLoader_Interface::load()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$throwExceptions</h4>
+<code>boolean</code><p>Whether or not to throw exceptions if the
+class is not resolved</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code>\Zend_Loader_Exception</code></th>
+<td>if class not found</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code><code>false</code>Class name of loaded class; false if $throwExceptions
+if false and no class found</div>
+</div></div>
+</div>
+<a id="method_removePrefixPath"></a><div class="element clickable method public method_removePrefixPath " data-toggle="collapse" data-target=".method_removePrefixPath .collapse" title="public">
+<h2>Remove a prefix (or prefixed-path) from the registry</h2>
+<pre>removePrefixPath(string $prefix, string $path<code> = null</code>) : \Zend_Loader_PluginLoader</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend_Loader_PluginLoader_Interface::removePrefixPath()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$prefix</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$path</h4>
+<code>string</code><p>OPTIONAL</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend_Loader_PluginLoader</code></div>
+</div></div>
+</div>
+<a id="method_setIncludeFileCache"></a><div class="element clickable method public method_setIncludeFileCache " data-toggle="collapse" data-target=".method_setIncludeFileCache .collapse" title="public">
+<h2>Set path to class file cache</h2>
+<pre>setIncludeFileCache(string $file) : void</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Specify a path to a file that will add include_once statements for each
+plugin class loaded. This is an opt-in feature for performance purposes.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$file</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code>\Zend_Loader_PluginLoader_Exception</code></th>
+<td>if file is not writeable or path does not exist</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method__appendIncFile"></a><div class="element clickable method protected method__appendIncFile " data-toggle="collapse" data-target=".method__appendIncFile .collapse" title="protected">
+<h2>Append an include_once statement to the class file cache</h2>
+<pre>_appendIncFile(string $incFile) : void</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$incFile</h4>
+<code>string</code>
+</div>
+</div></div>
+</div>
+<a id="method__formatName"></a><div class="element clickable method protected method__formatName " data-toggle="collapse" data-target=".method__formatName .collapse" title="protected">
+<h2>Normalize plugin name</h2>
+<pre>_formatName(string $name) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method__formatPrefix"></a><div class="element clickable method protected method__formatPrefix " data-toggle="collapse" data-target=".method__formatPrefix .collapse" title="protected">
+<h2>Format prefix for internal use</h2>
+<pre>_formatPrefix(string $prefix) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$prefix</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<h3>
+<i title="Properties" class="icon-custom icon-property"></i> Properties</h3>
+<a id="property__includeFileCache"> </a><div class="element clickable property protected property__includeFileCache" data-toggle="collapse" data-target=".property__includeFileCache .collapse" title="protected">
+<h2>Class map cache file</h2>
+<pre>$_includeFileCache : string</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__includeFileCacheHandler"> </a><div class="element clickable property protected property__includeFileCacheHandler" data-toggle="collapse" data-target=".property__includeFileCacheHandler .collapse" title="protected">
+<h2>Class map cache file handler</h2>
+<pre>$_includeFileCacheHandler : resource</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__loadedPluginPaths"> </a><div class="element clickable property protected property__loadedPluginPaths" data-toggle="collapse" data-target=".property__loadedPluginPaths .collapse" title="protected">
+<h2>Instance loaded plugin paths</h2>
+<pre>$_loadedPluginPaths : array</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>array()</code></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__loadedPlugins"> </a><div class="element clickable property protected property__loadedPlugins" data-toggle="collapse" data-target=".property__loadedPlugins .collapse" title="protected">
+<h2>Instance loaded plugins</h2>
+<pre>$_loadedPlugins : array</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>array()</code></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__prefixToPaths"> </a><div class="element clickable property protected property__prefixToPaths" data-toggle="collapse" data-target=".property__prefixToPaths .collapse" title="protected">
+<h2>Instance registry property</h2>
+<pre>$_prefixToPaths : array</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>array()</code></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__staticLoadedPluginPaths"> </a><div class="element clickable property protected property__staticLoadedPluginPaths" data-toggle="collapse" data-target=".property__staticLoadedPluginPaths .collapse" title="protected">
+<h2>Statically loaded plugin path mappings</h2>
+<pre>$_staticLoadedPluginPaths : array</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>array()</code></div>
+</div></div>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__staticLoadedPlugins"> </a><div class="element clickable property protected property__staticLoadedPlugins" data-toggle="collapse" data-target=".property__staticLoadedPlugins .collapse" title="protected">
+<h2>Statically loaded plugins</h2>
+<pre>$_staticLoadedPlugins : array</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>array()</code></div>
+</div></div>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__staticPrefixToPaths"> </a><div class="element clickable property protected property__staticPrefixToPaths" data-toggle="collapse" data-target=".property__staticPrefixToPaths .collapse" title="protected">
+<h2>Static registry property</h2>
+<pre>$_staticPrefixToPaths : array</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>array()</code></div>
+</div></div>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__useStaticRegistry"> </a><div class="element clickable property protected property__useStaticRegistry" data-toggle="collapse" data-target=".property__useStaticRegistry .collapse" title="protected">
+<h2>Whether to use a statically named registry for loading plugins</h2>
+<pre>$_useStaticRegistry : string | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>null</code></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.8.5</a> and<br>
+            generated on 2015-11-23T12:38:53-06:00.<br></footer></div>
+</div>
+</body>
+</html>

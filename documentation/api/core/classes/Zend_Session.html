@@ -1,0 +1,868 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>Zend AMF API Documentation » \Zend_Session</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">Zend AMF API Documentation</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Zend.html"><i class="icon-folder-open"></i> Zend</a></li>
+<li><a href="../packages/Zend_Amf.html"><i class="icon-folder-open"></i> Zend_Amf</a></li>
+<li><a href="../packages/Zend_Auth.html"><i class="icon-folder-open"></i> Zend_Auth</a></li>
+<li><a href="../packages/Zend_Date.html"><i class="icon-folder-open"></i> Zend_Date</a></li>
+<li><a href="../packages/Zend_Loader.html"><i class="icon-folder-open"></i> Zend_Loader</a></li>
+<li><a href="../packages/Zend_Server.html"><i class="icon-folder-open"></i> Zend_Server</a></li>
+<li><a href="../packages/Zend_Session.html"><i class="icon-folder-open"></i> Zend_Session</a></li>
+<li><a href="../packages/Zend_Version.html"><i class="icon-folder-open"></i> Zend_Version</a></li>
+</ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">77</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">5</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<div xmlns:php="http://php.net/xsl" class="btn-toolbar">
+<div class="btn-group visibility" data-toggle="buttons-checkbox">
+<button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button>
+</div>
+<div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+</div>
+<ul xmlns:php="http://php.net/xsl" class="side-nav nav nav-list">
+<li class="nav-header">
+<i title="Methods" class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method_destroy" title="destroy() :: destroy() - This is used to destroy session data, and optionally, the session cookie itself"><span class="description">destroy() - This is used to destroy session data, and optionally, the session cookie itself</span><pre>destroy()</pre></a></li>
+<li class="method public "><a href="#method_expireSessionCookie" title="expireSessionCookie() :: expireSessionCookie() - Sends an expired session id cookie, causing the client to delete the session cookie"><span class="description">expireSessionCookie() - Sends an expired session id cookie, causing the client to delete the session cookie</span><pre>expireSessionCookie()</pre></a></li>
+<li class="method public "><a href="#method_forgetMe" title="forgetMe() :: forgetMe() - Write a volatile session cookie, removing any persistent cookie that may have existed. The session
+would end upon, for example, termination of a web browser program."><span class="description">forgetMe() - Write a volatile session cookie, removing any persistent cookie that may have existed. The session
+would end upon, for example, termination of a web browser program.</span><pre>forgetMe()</pre></a></li>
+<li class="method public "><a href="#method_getId" title="getId() :: getId() - get the current session id"><span class="description">getId() - get the current session id</span><pre>getId()</pre></a></li>
+<li class="method public "><a href="#method_getIterator" title="getIterator() :: getIterator() - return an iteratable object for use in foreach and the like,
+this completes the IteratorAggregate interface"><span class="description">getIterator() - return an iteratable object for use in foreach and the like,
+this completes the IteratorAggregate interface</span><pre>getIterator()</pre></a></li>
+<li class="method public "><a href="#method_getOptions" title="getOptions() :: getOptions()"><span class="description">getOptions()</span><pre>getOptions()</pre></a></li>
+<li class="method public "><a href="#method_getSaveHandler" title="getSaveHandler() :: getSaveHandler() - Get the session Save Handler"><span class="description">getSaveHandler() - Get the session Save Handler</span><pre>getSaveHandler()</pre></a></li>
+<li class="method public "><a href="#method_isDestroyed" title="isDestroyed() :: Whether or not session has been destroyed via session_destroy()"><span class="description">Whether or not session has been destroyed via session_destroy()</span><pre>isDestroyed()</pre></a></li>
+<li class="method public "><a href="#method_isReadable" title="isReadable() :: isReadable() - returns a boolean indicating if namespaces can write (use setters)"><span class="description">isReadable() - returns a boolean indicating if namespaces can write (use setters)</span><pre>isReadable()</pre></a></li>
+<li class="method public "><a href="#method_isRegenerated" title="isRegenerated() :: isRegenerated() - convenience method to determine if session_regenerate_id()
+has been called during this request by Zend_Session."><span class="description">isRegenerated() - convenience method to determine if session_regenerate_id()
+has been called during this request by Zend_Session.</span><pre>isRegenerated()</pre></a></li>
+<li class="method public "><a href="#method_isStarted" title="isStarted() :: isStarted() - convenience method to determine if the session is already started."><span class="description">isStarted() - convenience method to determine if the session is already started.</span><pre>isStarted()</pre></a></li>
+<li class="method public "><a href="#method_isWritable" title="isWritable() :: isWritable() - returns a boolean indicating if namespaces can write (use setters)"><span class="description">isWritable() - returns a boolean indicating if namespaces can write (use setters)</span><pre>isWritable()</pre></a></li>
+<li class="method public "><a href="#method_namespaceGet" title="namespaceGet() :: namespaceGet() - get all variables in a namespace
+Deprecated: Use getIterator() in Zend_Session_Namespace."><span class="description">namespaceGet() - get all variables in a namespace
+Deprecated: Use getIterator() in Zend_Session_Namespace.</span><pre>namespaceGet()</pre></a></li>
+<li class="method public "><a href="#method_namespaceIsset" title="namespaceIsset() :: namespaceIsset() - check to see if a namespace is set"><span class="description">namespaceIsset() - check to see if a namespace is set</span><pre>namespaceIsset()</pre></a></li>
+<li class="method public "><a href="#method_namespaceUnset" title="namespaceUnset() :: namespaceUnset() - unset a namespace or a variable within a namespace"><span class="description">namespaceUnset() - unset a namespace or a variable within a namespace</span><pre>namespaceUnset()</pre></a></li>
+<li class="method public "><a href="#method_regenerateId" title="regenerateId() :: regenerateId() - Regenerate the session id.  Best practice is to call this after
+session is started.  If called prior to session starting, session id will be regenerated
+at start time."><span class="description">regenerateId() - Regenerate the session id.  Best practice is to call this after
+session is started.  If called prior to session starting, session id will be regenerated
+at start time.</span><pre>regenerateId()</pre></a></li>
+<li class="method public "><a href="#method_registerValidator" title="registerValidator() :: registerValidator() - register a validator that will attempt to validate this session for
+every future request"><span class="description">registerValidator() - register a validator that will attempt to validate this session for
+every future request</span><pre>registerValidator()</pre></a></li>
+<li class="method public "><a href="#method_rememberMe" title="rememberMe() :: rememberMe() - Write a persistent cookie that expires after a number of seconds in the future. If no number of
+seconds is specified, then this defaults to self::$_rememberMeSeconds.  Due to clock errors on end users' systems,
+large values are recommended to avoid undesirable expiration of session cookies."><span class="description">rememberMe() - Write a persistent cookie that expires after a number of seconds in the future. If no number of
+seconds is specified, then this defaults to self::$_rememberMeSeconds.  Due to clock errors on end users' systems,
+large values are recommended to avoid undesirable expiration of session cookies.</span><pre>rememberMe()</pre></a></li>
+<li class="method public "><a href="#method_rememberUntil" title="rememberUntil() :: rememberUntil() - This method does the work of changing the state of the session cookie and making
+sure that it gets resent to the browser via regenerateId()"><span class="description">rememberUntil() - This method does the work of changing the state of the session cookie and making
+sure that it gets resent to the browser via regenerateId()</span><pre>rememberUntil()</pre></a></li>
+<li class="method public "><a href="#method_sessionExists" title="sessionExists() :: sessionExists() - whether or not a session exists for the current request"><span class="description">sessionExists() - whether or not a session exists for the current request</span><pre>sessionExists()</pre></a></li>
+<li class="method public "><a href="#method_setId" title="setId() :: setId() - set an id to a user specified id"><span class="description">setId() - set an id to a user specified id</span><pre>setId()</pre></a></li>
+<li class="method public "><a href="#method_setOptions" title="setOptions() :: setOptions - set both the class specified"><span class="description">setOptions - set both the class specified</span><pre>setOptions()</pre></a></li>
+<li class="method public "><a href="#method_setSaveHandler" title="setSaveHandler() :: setSaveHandler() - Session Save Handler assignment"><span class="description">setSaveHandler() - Session Save Handler assignment</span><pre>setSaveHandler()</pre></a></li>
+<li class="method public "><a href="#method_start" title="start() :: start() - Start the session."><span class="description">start() - Start the session.</span><pre>start()</pre></a></li>
+<li class="method public "><a href="#method_stop" title="stop() :: stop() - Disable write access.  Optionally disable read (not implemented)."><span class="description">stop() - Disable write access.  Optionally disable read (not implemented).</span><pre>stop()</pre></a></li>
+<li class="method public "><a href="#method_writeClose" title="writeClose() :: writeClose() - Shutdown the sesssion, close writing and detach $_SESSION from the back-end storage mechanism."><span class="description">writeClose() - Shutdown the sesssion, close writing and detach $_SESSION from the back-end storage mechanism.</span><pre>writeClose()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="method protected "><a href="#method___construct" title="__construct() :: Constructor overriding - make sure that a developer cannot instantiate"><span class="description">Constructor overriding - make sure that a developer cannot instantiate</span><pre>__construct()</pre></a></li>
+<li class="method protected "><a href="#method__checkId" title="_checkId() :: Perform a hash-bits check on the session ID"><span class="description">Perform a hash-bits check on the session ID</span><pre>_checkId()</pre></a></li>
+<li class="method protected inherited"><a href="#method__namespaceGet" title="_namespaceGet() :: namespaceGet() - Get $name variable from $namespace, returning by reference."><span class="description">namespaceGet() - Get $name variable from $namespace, returning by reference.</span><pre>_namespaceGet()</pre></a></li>
+<li class="method protected inherited"><a href="#method__namespaceGetAll" title="_namespaceGetAll() :: namespaceGetAll() - Get an array containing $namespace, including expiring data."><span class="description">namespaceGetAll() - Get an array containing $namespace, including expiring data.</span><pre>_namespaceGetAll()</pre></a></li>
+<li class="method protected inherited"><a href="#method__namespaceIsset" title="_namespaceIsset() :: namespaceIsset() - check to see if a namespace or a variable within a namespace is set"><span class="description">namespaceIsset() - check to see if a namespace or a variable within a namespace is set</span><pre>_namespaceIsset()</pre></a></li>
+<li class="method protected inherited"><a href="#method__namespaceUnset" title="_namespaceUnset() :: namespaceUnset() - unset a namespace or a variable within a namespace"><span class="description">namespaceUnset() - unset a namespace or a variable within a namespace</span><pre>_namespaceUnset()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul>
+<li class="method private "><a href="#method__processStartupMetadataGlobal" title="_processStartupMetadataGlobal() :: _processGlobalMetadata() - this method initizes the sessions GLOBAL
+metadata, mostly global data expiration calculations."><span class="description">_processGlobalMetadata() - this method initizes the sessions GLOBAL
+metadata, mostly global data expiration calculations.</span><pre>_processStartupMetadataGlobal()</pre></a></li>
+<li class="method private "><a href="#method__processValidators" title="_processValidators() :: _processValidator() - internal function that is called in the existence of VALID metadata"><span class="description">_processValidator() - internal function that is called in the existence of VALID metadata</span><pre>_processValidators()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i title="Properties" class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected "><a href="#property__expiringData" title="$_expiringData() :: Since expiring data is handled at startup to avoid __destruct difficulties,
+the data that will be expiring at end of this request is held here"><span class="description"></span><pre>$_expiringData</pre></a></li>
+<li class="property protected "><a href="#property__readable" title="$_readable() :: Whether or not session permits reading (reading data in $_SESSION[])"><span class="description"></span><pre>$_readable</pre></a></li>
+<li class="property protected "><a href="#property__throwStartupExceptions" title="$_throwStartupExceptions() :: $_throwStartupException"><span class="description"></span><pre>$_throwStartupExceptions</pre></a></li>
+<li class="property protected "><a href="#property__writable" title="$_writable() :: Whether or not session permits writing (modification of $_SESSION[])"><span class="description"></span><pre>$_writable</pre></a></li>
+</ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul>
+<li class="property private "><a href="#property__defaultOptions" title="$_defaultOptions() :: Private list of php's ini values for ext/session
+null values will default to the php.ini value, otherwise
+the value below will overwrite the default ini value, unless
+the user has set an option explicity with setOptions()"><span class="description"></span><pre>$_defaultOptions</pre></a></li>
+<li class="property private "><a href="#property__defaultOptionsSet" title="$_defaultOptionsSet() :: Whether the default options listed in Zend_Session::$_localOptions have been set"><span class="description"></span><pre>$_defaultOptionsSet</pre></a></li>
+<li class="property private "><a href="#property__destroyed" title="$_destroyed() :: Whether or not session has been destroyed via session_destroy()"><span class="description"></span><pre>$_destroyed</pre></a></li>
+<li class="property private "><a href="#property__localOptions" title='$_localOptions() :: List of options pertaining to Zend_Session that can be set by developers
+using Zend_Session::setOptions(). This list intentionally duplicates
+the individual declaration of static "class" variables by the same names.'><span class="description"></span><pre>$_localOptions</pre></a></li>
+<li class="property private "><a href="#property__regenerateIdState" title="$_regenerateIdState() :: Whether or not the session id has been regenerated this request."><span class="description"></span><pre>$_regenerateIdState</pre></a></li>
+<li class="property private "><a href="#property__rememberMeSeconds" title="$_rememberMeSeconds() :: Default number of seconds the session will be remembered for when asked to be remembered"><span class="description"></span><pre>$_rememberMeSeconds</pre></a></li>
+<li class="property private "><a href="#property__saveHandler" title="$_saveHandler() :: A reference to the set session save handler"><span class="description"></span><pre>$_saveHandler</pre></a></li>
+<li class="property private "><a href="#property__sessionCookieDeleted" title="$_sessionCookieDeleted() :: Whether or not session id cookie has been deleted"><span class="description"></span><pre>$_sessionCookieDeleted</pre></a></li>
+<li class="property private "><a href="#property__sessionStarted" title="$_sessionStarted() :: Check whether or not the session was started"><span class="description"></span><pre>$_sessionStarted</pre></a></li>
+<li class="property private "><a href="#property__strict" title="$_strict() :: Whether or not session must be initiated before usage"><span class="description"></span><pre>$_strict</pre></a></li>
+<li class="property private "><a href="#property__writeClosed" title="$_writeClosed() :: Whether or not write close has been performed."><span class="description"></span><pre>$_writeClosed</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i title="Constants" class="icon-custom icon-constant"></i> Constants
+                    <ul>
+<li class="constant  "><a href="#constant__THROW_NOT_READABLE_MSG" title="_THROW_NOT_READABLE_MSG() :: Error message thrown when an action requires reading session data,
+but current Zend_Session is not marked as readable."><span class="description">Error message thrown when an action requires reading session data,
+but current Zend_Session is not marked as readable.</span><pre>_THROW_NOT_READABLE_MSG</pre></a></li>
+<li class="constant  "><a href="#constant__THROW_NOT_WRITABLE_MSG" title="_THROW_NOT_WRITABLE_MSG() :: Error message thrown when an action requires modification,
+but current Zend_Session has been marked as read-only."><span class="description">Error message thrown when an action requires modification,
+but current Zend_Session has been marked as read-only.</span><pre>_THROW_NOT_WRITABLE_MSG</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a xmlns:php="http://php.net/xsl" id="\Zend_Session"></a><ul xmlns:php="http://php.net/xsl" class="breadcrumb">
+<li>
+<a href="../index.html"><i title="Classes" class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Zend_Session.html">Zend_Session</a>
+</li>
+</ul>
+<div xmlns:php="http://php.net/xsl" class="element class">
+<p class="short_description">Zend_Session</p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>category</th>
+<td>Zend</td>
+</tr>
+<tr>
+<th>package</th>
+<td><a href="../packages/Zend_Session.html">Zend_Session</a></td>
+</tr>
+<tr>
+<th>copyright</th>
+<td>Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)</td>
+</tr>
+<tr>
+<th>license</th>
+<td><a href="http://framework.zend.com/license/new-bsd">New BSD License</a></td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend_Session_Abstract</td>
+</tr>
+</table>
+<h3>
+<i title="Methods" class="icon-custom icon-method"></i> Methods</h3>
+<a id="method_destroy"></a><div class="element clickable method public method_destroy " data-toggle="collapse" data-target=".method_destroy .collapse" title="public">
+<h2>destroy() - This is used to destroy session data, and optionally, the session cookie itself</h2>
+<pre>destroy(boolean $remove_cookie<code> = true</code>, boolean $readonly<code> = true</code>) : void</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$remove_cookie</h4>
+<code>boolean</code><ul>
+<li>OPTIONAL remove session id cookie, defaults to true (remove cookie)</li>
+</ul></div>
+<div class="subelement argument">
+<h4>$readonly</h4>
+<code>boolean</code><ul>
+<li>OPTIONAL remove write access (i.e. throw error if Zend_Session's attempt writes)</li>
+</ul></div>
+</div></div>
+</div>
+<a id="method_expireSessionCookie"></a><div class="element clickable method public method_expireSessionCookie " data-toggle="collapse" data-target=".method_expireSessionCookie .collapse" title="public">
+<h2>expireSessionCookie() - Sends an expired session id cookie, causing the client to delete the session cookie</h2>
+<pre>expireSessionCookie() : void</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_forgetMe"></a><div class="element clickable method public method_forgetMe " data-toggle="collapse" data-target=".method_forgetMe .collapse" title="public">
+<h2>forgetMe() - Write a volatile session cookie, removing any persistent cookie that may have existed. The session
+would end upon, for example, termination of a web browser program.</h2>
+<pre>forgetMe() : void</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_getId"></a><div class="element clickable method public method_getId " data-toggle="collapse" data-target=".method_getId .collapse" title="public">
+<h2>getId() - get the current session id</h2>
+<pre>getId() : string</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_getIterator"></a><div class="element clickable method public method_getIterator " data-toggle="collapse" data-target=".method_getIterator .collapse" title="public">
+<h2>getIterator() - return an iteratable object for use in foreach and the like,
+this completes the IteratorAggregate interface</h2>
+<pre>getIterator() : \ArrayObject</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code>\Zend_Session_Exception</code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>\ArrayObject</code></div>
+</div></div>
+</div>
+<a id="method_getOptions"></a><div class="element clickable method public method_getOptions " data-toggle="collapse" data-target=".method_getOptions .collapse" title="public">
+<h2>getOptions()</h2>
+<pre>getOptions(string $optionName<code> = null</code>) : array | string</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$optionName</h4>
+<code>string</code><p>OPTIONAL</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code><code>string</code>
+</div>
+</div></div>
+</div>
+<a id="method_getSaveHandler"></a><div class="element clickable method public method_getSaveHandler " data-toggle="collapse" data-target=".method_getSaveHandler .collapse" title="public">
+<h2>getSaveHandler() - Get the session Save Handler</h2>
+<pre>getSaveHandler() : \Zend_Session_SaveHandler_Interface</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend_Session_SaveHandler_Interface</code></div>
+</div></div>
+</div>
+<a id="method_isDestroyed"></a><div class="element clickable method public method_isDestroyed " data-toggle="collapse" data-target=".method_isDestroyed .collapse" title="public">
+<h2>Whether or not session has been destroyed via session_destroy()</h2>
+<pre>isDestroyed() : boolean</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a id="method_isReadable"></a><div class="element clickable method public method_isReadable " data-toggle="collapse" data-target=".method_isReadable .collapse" title="public">
+<h2>isReadable() - returns a boolean indicating if namespaces can write (use setters)</h2>
+<pre>isReadable() : boolean</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a id="method_isRegenerated"></a><div class="element clickable method public method_isRegenerated " data-toggle="collapse" data-target=".method_isRegenerated .collapse" title="public">
+<h2>isRegenerated() - convenience method to determine if session_regenerate_id()
+has been called during this request by Zend_Session.</h2>
+<pre>isRegenerated() : boolean</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a id="method_isStarted"></a><div class="element clickable method public method_isStarted " data-toggle="collapse" data-target=".method_isStarted .collapse" title="public">
+<h2>isStarted() - convenience method to determine if the session is already started.</h2>
+<pre>isStarted() : boolean</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a id="method_isWritable"></a><div class="element clickable method public method_isWritable " data-toggle="collapse" data-target=".method_isWritable .collapse" title="public">
+<h2>isWritable() - returns a boolean indicating if namespaces can write (use setters)</h2>
+<pre>isWritable() : boolean</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a id="method_namespaceGet"></a><div class="element clickable method public method_namespaceGet " data-toggle="collapse" data-target=".method_namespaceGet .collapse" title="public">
+<h2>namespaceGet() - get all variables in a namespace
+Deprecated: Use getIterator() in Zend_Session_Namespace.</h2>
+<pre>namespaceGet(string $namespace) : array</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$namespace</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_namespaceIsset"></a><div class="element clickable method public method_namespaceIsset " data-toggle="collapse" data-target=".method_namespaceIsset .collapse" title="public">
+<h2>namespaceIsset() - check to see if a namespace is set</h2>
+<pre>namespaceIsset(string $namespace) : boolean</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$namespace</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a id="method_namespaceUnset"></a><div class="element clickable method public method_namespaceUnset " data-toggle="collapse" data-target=".method_namespaceUnset .collapse" title="public">
+<h2>namespaceUnset() - unset a namespace or a variable within a namespace</h2>
+<pre>namespaceUnset(string $namespace) : void</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$namespace</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code>\Zend_Session_Exception</code></th>
+<td></td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_regenerateId"></a><div class="element clickable method public method_regenerateId " data-toggle="collapse" data-target=".method_regenerateId .collapse" title="public">
+<h2>regenerateId() - Regenerate the session id.  Best practice is to call this after
+session is started.  If called prior to session starting, session id will be regenerated
+at start time.</h2>
+<pre>regenerateId() : void</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code>\Zend_Session_Exception</code></th>
+<td></td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_registerValidator"></a><div class="element clickable method public method_registerValidator " data-toggle="collapse" data-target=".method_registerValidator .collapse" title="public">
+<h2>registerValidator() - register a validator that will attempt to validate this session for
+every future request</h2>
+<pre>registerValidator(\Zend_Session_Validator_Interface $validator) : void</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$validator</h4>
+<code>\Zend_Session_Validator_Interface</code>
+</div>
+</div></div>
+</div>
+<a id="method_rememberMe"></a><div class="element clickable method public method_rememberMe " data-toggle="collapse" data-target=".method_rememberMe .collapse" title="public">
+<h2>rememberMe() - Write a persistent cookie that expires after a number of seconds in the future. If no number of
+seconds is specified, then this defaults to self::$_rememberMeSeconds.  Due to clock errors on end users' systems,
+large values are recommended to avoid undesirable expiration of session cookies.</h2>
+<pre>rememberMe(integer $seconds<code> = null</code>) : void</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$seconds</h4>
+<code>integer</code><p>OPTIONAL specifies TTL for cookie in seconds from present time</p></div>
+</div></div>
+</div>
+<a id="method_rememberUntil"></a><div class="element clickable method public method_rememberUntil " data-toggle="collapse" data-target=".method_rememberUntil .collapse" title="public">
+<h2>rememberUntil() - This method does the work of changing the state of the session cookie and making
+sure that it gets resent to the browser via regenerateId()</h2>
+<pre>rememberUntil(integer $seconds<code> = 0</code>) : void</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$seconds</h4>
+<code>integer</code>
+</div>
+</div></div>
+</div>
+<a id="method_sessionExists"></a><div class="element clickable method public method_sessionExists " data-toggle="collapse" data-target=".method_sessionExists .collapse" title="public">
+<h2>sessionExists() - whether or not a session exists for the current request</h2>
+<pre>sessionExists() : boolean</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a id="method_setId"></a><div class="element clickable method public method_setId " data-toggle="collapse" data-target=".method_setId .collapse" title="public">
+<h2>setId() - set an id to a user specified id</h2>
+<pre>setId(string $id) : void</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code>\Zend_Session_Exception</code></th>
+<td></td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_setOptions"></a><div class="element clickable method public method_setOptions " data-toggle="collapse" data-target=".method_setOptions .collapse" title="public">
+<h2>setOptions - set both the class specified</h2>
+<pre>setOptions(array $userOptions<code> = array()</code>) : void</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$userOptions</h4>
+<code>array</code><ul>
+<li>pass-by-keyword style array of <option name, option value> pairs</li>
+</ul></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code>\Zend_Session_Exception</code></th>
+<td></td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_setSaveHandler"></a><div class="element clickable method public method_setSaveHandler " data-toggle="collapse" data-target=".method_setSaveHandler .collapse" title="public">
+<h2>setSaveHandler() - Session Save Handler assignment</h2>
+<pre>setSaveHandler(\Zend_Session_SaveHandler_Interface $saveHandler) : void</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$saveHandler</h4></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code>\Zend_Session_Exception</code></th>
+<td>When the session_set_save_handler call fails</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_start"></a><div class="element clickable method public method_start " data-toggle="collapse" data-target=".method_start .collapse" title="public">
+<h2>start() - Start the session.</h2>
+<pre>start(boolean|array $options<code> = false</code>) : void</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$options</h4>
+<code>boolean</code><code>array</code><p>OPTIONAL Either user supplied options, or flag indicating if start initiated automatically</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code>\Zend_Session_Exception</code></th>
+<td></td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_stop"></a><div class="element clickable method public method_stop " data-toggle="collapse" data-target=".method_stop .collapse" title="public">
+<h2>stop() - Disable write access.  Optionally disable read (not implemented).</h2>
+<pre>stop() : void</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_writeClose"></a><div class="element clickable method public method_writeClose " data-toggle="collapse" data-target=".method_writeClose .collapse" title="public">
+<h2>writeClose() - Shutdown the sesssion, close writing and detach $_SESSION from the back-end storage mechanism.</h2>
+<pre>writeClose(boolean $readonly<code> = true</code>) : void</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This will complete the internal data transformation on this request.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$readonly</h4>
+<code>boolean</code><ul>
+<li>OPTIONAL remove write access (i.e. throw error if Zend_Session's attempt writes)</li>
+</ul></div>
+</div></div>
+</div>
+<a id="method___construct"></a><div class="element clickable method protected method___construct " data-toggle="collapse" data-target=".method___construct .collapse" title="protected">
+<h2>Constructor overriding - make sure that a developer cannot instantiate</h2>
+<pre>__construct() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method__checkId"></a><div class="element clickable method protected method__checkId " data-toggle="collapse" data-target=".method__checkId .collapse" title="protected">
+<h2>Perform a hash-bits check on the session ID</h2>
+<pre>_checkId(string $id) : boolean</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>string</code><p>Session ID</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a id="method__namespaceGet"></a><div class="element clickable method protected method__namespaceGet inherited" data-toggle="collapse" data-target=".method__namespaceGet .collapse" title="protected">
+<h2>namespaceGet() - Get $name variable from $namespace, returning by reference.</h2>
+<pre>_namespaceGet(string $namespace, string $name<code> = null</code>) : mixed</pre>
+<div class="labels">
+<span class="label">Inherited</span><span class="label">Static</span>
+</div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$namespace</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a id="method__namespaceGetAll"></a><div class="element clickable method protected method__namespaceGetAll inherited" data-toggle="collapse" data-target=".method__namespaceGetAll .collapse" title="protected">
+<h2>namespaceGetAll() - Get an array containing $namespace, including expiring data.</h2>
+<pre>_namespaceGetAll(string $namespace) : mixed</pre>
+<div class="labels">
+<span class="label">Inherited</span><span class="label">Static</span>
+</div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$namespace</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a id="method__namespaceIsset"></a><div class="element clickable method protected method__namespaceIsset inherited" data-toggle="collapse" data-target=".method__namespaceIsset .collapse" title="protected">
+<h2>namespaceIsset() - check to see if a namespace or a variable within a namespace is set</h2>
+<pre>_namespaceIsset(string $namespace, string $name<code> = null</code>) : boolean</pre>
+<div class="labels">
+<span class="label">Inherited</span><span class="label">Static</span>
+</div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$namespace</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a id="method__namespaceUnset"></a><div class="element clickable method protected method__namespaceUnset inherited" data-toggle="collapse" data-target=".method__namespaceUnset .collapse" title="protected">
+<h2>namespaceUnset() - unset a namespace or a variable within a namespace</h2>
+<pre>_namespaceUnset(string $namespace, string $name<code> = null</code>) : void</pre>
+<div class="labels">
+<span class="label">Inherited</span><span class="label">Static</span>
+</div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$namespace</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code>\Zend_Session_Exception</code></th>
+<td></td>
+</tr></table>
+</div></div>
+</div>
+<a id="method__processStartupMetadataGlobal"></a><div class="element clickable method private method__processStartupMetadataGlobal " data-toggle="collapse" data-target=".method__processStartupMetadataGlobal .collapse" title="private">
+<h2>_processGlobalMetadata() - this method initizes the sessions GLOBAL
+metadata, mostly global data expiration calculations.</h2>
+<pre>_processStartupMetadataGlobal() : void</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method__processValidators"></a><div class="element clickable method private method__processValidators " data-toggle="collapse" data-target=".method__processValidators .collapse" title="private">
+<h2>_processValidator() - internal function that is called in the existence of VALID metadata</h2>
+<pre>_processValidators() : void</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code>\Zend_Session_Exception</code></th>
+<td></td>
+</tr></table>
+</div></div>
+</div>
+<h3>
+<i title="Properties" class="icon-custom icon-property"></i> Properties</h3>
+<a id="property__expiringData"> </a><div class="element clickable property protected property__expiringData" data-toggle="collapse" data-target=".property__expiringData .collapse" title="protected">
+<h2>Since expiring data is handled at startup to avoid __destruct difficulties,
+the data that will be expiring at end of this request is held here</h2>
+<pre>$_expiringData : array</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>array()</code></div>
+</div></div>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__readable"> </a><div class="element clickable property protected property__readable" data-toggle="collapse" data-target=".property__readable .collapse" title="protected">
+<h2>Whether or not session permits reading (reading data in $_SESSION[])</h2>
+<pre>$_readable : boolean</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>false</code></div>
+</div></div>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__throwStartupExceptions"> </a><div class="element clickable property protected property__throwStartupExceptions" data-toggle="collapse" data-target=".property__throwStartupExceptions .collapse" title="protected">
+<h2>$_throwStartupException</h2>
+<pre>$_throwStartupExceptions : boolean | \bitset</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>true</code></div>
+</div></div>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__writable"> </a><div class="element clickable property protected property__writable" data-toggle="collapse" data-target=".property__writable .collapse" title="protected">
+<h2>Whether or not session permits writing (modification of $_SESSION[])</h2>
+<pre>$_writable : boolean</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>false</code></div>
+</div></div>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__defaultOptions"> </a><div class="element clickable property private property__defaultOptions" data-toggle="collapse" data-target=".property__defaultOptions .collapse" title="private">
+<h2>Private list of php's ini values for ext/session
+null values will default to the php.ini value, otherwise
+the value below will overwrite the default ini value, unless
+the user has set an option explicity with setOptions()</h2>
+<pre>$_defaultOptions : array</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>array('save_path' => null, 'name' => null, 'save_handler' => null, 'gc_probability' => null, 'gc_divisor' => null, 'gc_maxlifetime' => null, 'serialize_handler' => null, 'cookie_lifetime' => null, 'cookie_path' => null, 'cookie_domain' => null, 'cookie_secure' => null, 'cookie_httponly' => null, 'use_cookies' => null, 'use_only_cookies' => 'on', 'referer_check' => null, 'entropy_file' => null, 'entropy_length' => null, 'cache_limiter' => null, 'cache_expire' => null, 'use_trans_sid' => null, 'bug_compat_42' => null, 'bug_compat_warn' => null, 'hash_function' => null, 'hash_bits_per_character' => null)</code></div>
+</div></div>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__defaultOptionsSet"> </a><div class="element clickable property private property__defaultOptionsSet" data-toggle="collapse" data-target=".property__defaultOptionsSet .collapse" title="private">
+<h2>Whether the default options listed in Zend_Session::$_localOptions have been set</h2>
+<pre>$_defaultOptionsSet : boolean</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>false</code></div>
+</div></div>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__destroyed"> </a><div class="element clickable property private property__destroyed" data-toggle="collapse" data-target=".property__destroyed .collapse" title="private">
+<h2>Whether or not session has been destroyed via session_destroy()</h2>
+<pre>$_destroyed : boolean</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>false</code></div>
+</div></div>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__localOptions"> </a><div class="element clickable property private property__localOptions" data-toggle="collapse" data-target=".property__localOptions .collapse" title="private">
+<h2>List of options pertaining to Zend_Session that can be set by developers
+using Zend_Session::setOptions(). This list intentionally duplicates
+the individual declaration of static "class" variables by the same names.</h2>
+<pre>$_localOptions : array</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>array('strict' => '_strict', 'remember_me_seconds' => '_rememberMeSeconds', 'throw_startup_exceptions' => '_throwStartupExceptions')</code></div>
+</div></div>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__regenerateIdState"> </a><div class="element clickable property private property__regenerateIdState" data-toggle="collapse" data-target=".property__regenerateIdState .collapse" title="private">
+<h2>Whether or not the session id has been regenerated this request.</h2>
+<pre>$_regenerateIdState : integer</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>0</code></div>
+</div></div>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"><p>Id regeneration state
+&lt;0 - regenerate requested when session is started
+0  - do nothing</p>
+<blockquote>
+<p>0 - already called session_regenerate_id()</p>
+</blockquote></div></div></div>
+</div>
+<a id="property__rememberMeSeconds"> </a><div class="element clickable property private property__rememberMeSeconds" data-toggle="collapse" data-target=".property__rememberMeSeconds .collapse" title="private">
+<h2>Default number of seconds the session will be remembered for when asked to be remembered</h2>
+<pre>$_rememberMeSeconds : integer</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>1209600</code></div>
+</div></div>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__saveHandler"> </a><div class="element clickable property private property__saveHandler" data-toggle="collapse" data-target=".property__saveHandler .collapse" title="private">
+<h2>A reference to the set session save handler</h2>
+<pre>$_saveHandler : \Zend_Session_SaveHandler_Interface</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>null</code></div>
+</div></div>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__sessionCookieDeleted"> </a><div class="element clickable property private property__sessionCookieDeleted" data-toggle="collapse" data-target=".property__sessionCookieDeleted .collapse" title="private">
+<h2>Whether or not session id cookie has been deleted</h2>
+<pre>$_sessionCookieDeleted : boolean</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>false</code></div>
+</div></div>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__sessionStarted"> </a><div class="element clickable property private property__sessionStarted" data-toggle="collapse" data-target=".property__sessionStarted .collapse" title="private">
+<h2>Check whether or not the session was started</h2>
+<pre>$_sessionStarted : boolean</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>false</code></div>
+</div></div>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__strict"> </a><div class="element clickable property private property__strict" data-toggle="collapse" data-target=".property__strict .collapse" title="private">
+<h2>Whether or not session must be initiated before usage</h2>
+<pre>$_strict : boolean</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>false</code></div>
+</div></div>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__writeClosed"> </a><div class="element clickable property private property__writeClosed" data-toggle="collapse" data-target=".property__writeClosed .collapse" title="private">
+<h2>Whether or not write close has been performed.</h2>
+<pre>$_writeClosed : boolean</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>false</code></div>
+</div></div>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<h3>
+<i title="Constants" class="icon-custom icon-constant"></i> Constants</h3>
+<a id="constant__THROW_NOT_READABLE_MSG"> </a><div class="element clickable constant  constant__THROW_NOT_READABLE_MSG" data-toggle="collapse" data-target=".constant__THROW_NOT_READABLE_MSG .collapse" title="">
+<h2>Error message thrown when an action requires reading session data,
+but current Zend_Session is not marked as readable.</h2>
+<pre>_THROW_NOT_READABLE_MSG = 'Zend_Session is not marked as readable.' </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant__THROW_NOT_WRITABLE_MSG"> </a><div class="element clickable constant  constant__THROW_NOT_WRITABLE_MSG" data-toggle="collapse" data-target=".constant__THROW_NOT_WRITABLE_MSG .collapse" title="">
+<h2>Error message thrown when an action requires modification,
+but current Zend_Session has been marked as read-only.</h2>
+<pre>_THROW_NOT_WRITABLE_MSG = 'Zend_Session is currently marked as read-only.' </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.8.5</a> and<br>
+            generated on 2015-11-23T12:38:54-06:00.<br></footer></div>
+</div>
+</body>
+</html>

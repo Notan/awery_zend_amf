@@ -1,0 +1,941 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>Zend AMF API Documentation</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="css/template.css" rel="stylesheet" media="all">
+<script src="js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="js/bootstrap.js" type="text/javascript"></script><script src="js/template.js" type="text/javascript"></script><script src="js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="img/favicon.ico">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="index.html">Zend AMF API Documentation</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="packages/Zend.html"><i class="icon-folder-open"></i> Zend</a></li>
+<li><a href="packages/Zend_Amf.html"><i class="icon-folder-open"></i> Zend_Amf</a></li>
+<li><a href="packages/Zend_Auth.html"><i class="icon-folder-open"></i> Zend_Auth</a></li>
+<li><a href="packages/Zend_Date.html"><i class="icon-folder-open"></i> Zend_Date</a></li>
+<li><a href="packages/Zend_Loader.html"><i class="icon-folder-open"></i> Zend_Loader</a></li>
+<li><a href="packages/Zend_Server.html"><i class="icon-folder-open"></i> Zend_Server</a></li>
+<li><a href="packages/Zend_Session.html"><i class="icon-folder-open"></i> Zend_Session</a></li>
+<li><a href="packages/Zend_Version.html"><i class="icon-folder-open"></i> Zend_Version</a></li>
+</ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">77</span></a></li>
+<li><a href="markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">5</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4"><ul class="side-nav nav nav-list">
+<li class="nav-header">Filter type</li>
+<li><div class="btn-group type-filter" data-toggle="buttons-checkbox">
+<button class="btn critical">Critical</button><button class="btn error">Error</button><button class="btn notice">Notice</button>
+</div></li>
+<li class="nav-header">Navigation</li>
+<li><a href="#Session/Exception.php"><i class="icon-file"></i>Session/Exception.php</a></li>
+<li><a href="#Date.php"><i class="icon-file"></i>Date.php</a></li>
+<li><a href="#Date/Exception.php"><i class="icon-file"></i>Date/Exception.php</a></li>
+<li><a href="#Date/DateObject.php"><i class="icon-file"></i>Date/DateObject.php</a></li>
+<li><a href="#Loader/Exception.php"><i class="icon-file"></i>Loader/Exception.php</a></li>
+<li><a href="#Loader/Autoloader.php"><i class="icon-file"></i>Loader/Autoloader.php</a></li>
+<li><a href="#Exception.php"><i class="icon-file"></i>Exception.php</a></li>
+<li><a href="#Amf/Response.php"><i class="icon-file"></i>Amf/Response.php</a></li>
+<li><a href="#Amf/Parse/Resource/MysqliResult.php"><i class="icon-file"></i>Amf/Parse/Resource/MysqliResult.php</a></li>
+<li><a href="#Amf/Parse/TypeLoader.php"><i class="icon-file"></i>Amf/Parse/TypeLoader.php</a></li>
+<li><a href="#Amf/Exception.php"><i class="icon-file"></i>Amf/Exception.php</a></li>
+<li><a href="#Amf/Server.php"><i class="icon-file"></i>Amf/Server.php</a></li>
+<li><a href="#Amf/Response/Http.php"><i class="icon-file"></i>Amf/Response/Http.php</a></li>
+<li><a href="#Amf/Auth/Abstract.php"><i class="icon-file"></i>Amf/Auth/Abstract.php</a></li>
+<li><a href="#Amf/Request.php"><i class="icon-file"></i>Amf/Request.php</a></li>
+<li><a href="#Server/Method/Definition.php"><i class="icon-file"></i>Server/Method/Definition.php</a></li>
+<li><a href="#Server/Reflection/Function/Abstract.php"><i class="icon-file"></i>Server/Reflection/Function/Abstract.php</a></li>
+<li><a href="#Server/Reflection/Parameter.php"><i class="icon-file"></i>Server/Reflection/Parameter.php</a></li>
+<li><a href="#Server/Abstract.php"><i class="icon-file"></i>Server/Abstract.php</a></li>
+<li><a href="#Auth/Adapter/Ldap.php"><i class="icon-file"></i>Auth/Adapter/Ldap.php</a></li>
+<li><a href="#Auth/Adapter/Exception.php"><i class="icon-file"></i>Auth/Adapter/Exception.php</a></li>
+<li><a href="#Auth/Adapter/DbTable.php"><i class="icon-file"></i>Auth/Adapter/DbTable.php</a></li>
+<li><a href="#Auth/Adapter/Interface.php"><i class="icon-file"></i>Auth/Adapter/Interface.php</a></li>
+<li><a href="#Auth/Adapter/Digest.php"><i class="icon-file"></i>Auth/Adapter/Digest.php</a></li>
+<li><a href="#Auth/Exception.php"><i class="icon-file"></i>Auth/Exception.php</a></li>
+<li><a href="#Auth/Result.php"><i class="icon-file"></i>Auth/Result.php</a></li>
+<li><a href="#Auth/Storage/Exception.php"><i class="icon-file"></i>Auth/Storage/Exception.php</a></li>
+<li><a href="#Auth/Storage/Session.php"><i class="icon-file"></i>Auth/Storage/Session.php</a></li>
+<li><a href="#Auth/Storage/Interface.php"><i class="icon-file"></i>Auth/Storage/Interface.php</a></li>
+<li><a href="#Auth.php"><i class="icon-file"></i>Auth.php</a></li>
+</ul></div>
+<div class="span8">
+<ul class="breadcrumb">
+<li>
+<a href=""><i class="icon-remove-sign"></i></a><span class="divider">\</span>
+</li>
+<li>Compilation Errors</li>
+</ul>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents">
+<a name="Session/Exception.php" id="Session/Exception.php"></a><h3>
+<i class="icon-file"></i>Session/Exception.php<small style="float: right;padding-right: 10px;">6</small>
+</h3>
+<div><table class="table markers table-bordered">
+<thead><tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="error">
+<td>error</td>
+<td>56</td>
+<td>Argument $errfile is missing from the Docblock of handleSessionStartError</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>56</td>
+<td>Argument $errline is missing from the Docblock of handleSessionStartError</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>56</td>
+<td>Argument $errcontext is missing from the Docblock of handleSessionStartError</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>69</td>
+<td>Argument $errfile is missing from the Docblock of handleSilentWriteClose</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>69</td>
+<td>Argument $errline is missing from the Docblock of handleSilentWriteClose</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>69</td>
+<td>Argument $errcontext is missing from the Docblock of handleSilentWriteClose</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents">
+<a name="Date.php" id="Date.php"></a><h3>
+<i class="icon-file"></i>Date.php<small style="float: right;padding-right: 10px;">5</small>
+</h3>
+<div><table class="table markers table-bordered">
+<thead><tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="error">
+<td>error</td>
+<td>36</td>
+<td>No summary for class \Zend_Date</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>38</td>
+<td>No summary for property $_locale</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>41</td>
+<td>No summary for property $_fractional</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>42</td>
+<td>No summary for property $_precision</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>44</td>
+<td>No summary for property $_options</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="package-contents"></div>
+<div class="package-contents">
+<a name="Date/Exception.php" id="Date/Exception.php"></a><h3>
+<i class="icon-file"></i>Date/Exception.php<small style="float: right;padding-right: 10px;">8</small>
+</h3>
+<div><table class="table markers table-bordered">
+<thead><tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="error">
+<td>error</td>
+<td>35</td>
+<td>No summary for class \Zend_Date_Exception</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>37</td>
+<td>No summary for property $operand</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>39</td>
+<td>Argument $message is missing from the Docblock of __construct</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>39</td>
+<td>Argument $code is missing from the Docblock of __construct</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>39</td>
+<td>Argument $e is missing from the Docblock of __construct</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>39</td>
+<td>Argument $op is missing from the Docblock of __construct</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>39</td>
+<td>No summary for method __construct()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>45</td>
+<td>No summary for method getOperand()</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="Date/DateObject.php" id="Date/DateObject.php"></a><h3>
+<i class="icon-file"></i>Date/DateObject.php<small style="float: right;padding-right: 10px;">8</small>
+</h3>
+<div><table class="table markers table-bordered">
+<thead><tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="error">
+<td>error</td>
+<td>29</td>
+<td>No summary for class \Zend_Date_DateObject</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>35</td>
+<td>No summary for property $_cache</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>36</td>
+<td>No summary for property $_cacheTags</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>37</td>
+<td>No summary for property $_defaultOffset</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>43</td>
+<td>No summary for property $_offset</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>44</td>
+<td>No summary for property $_syncronised</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>47</td>
+<td>No summary for property $_dst</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>913</td>
+<td>Argument $rise is missing from the Docblock of calcSun</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="package-contents"></div>
+<div class="package-contents">
+<a name="Loader/Exception.php" id="Loader/Exception.php"></a><h3>
+<i class="icon-file"></i>Loader/Exception.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<thead><tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="error">
+<td>error</td>
+<td>34</td>
+<td>No summary for class \Zend_Loader_Exception</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents">
+<a name="Loader/Autoloader.php" id="Loader/Autoloader.php"></a><h3>
+<i class="icon-file"></i>Loader/Autoloader.php<small style="float: right;padding-right: 10px;">5</small>
+</h3>
+<div><table class="table markers table-bordered">
+<thead><tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="error">
+<td>error</td>
+<td>83</td>
+<td>No summary for property $_zfPath</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>254</td>
+<td>Argument $spec is missing from the Docblock of setZfPath</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>254</td>
+<td>Argument $version is missing from the Docblock of setZfPath</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>254</td>
+<td>No summary for method setZfPath()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>275</td>
+<td>No summary for method getZfPath()</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="package-contents"></div>
+<div class="package-contents">
+<a name="Exception.php" id="Exception.php"></a><h3>
+<i class="icon-file"></i>Exception.php<small style="float: right;padding-right: 10px;">2</small>
+</h3>
+<div><table class="table markers table-bordered">
+<thead><tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="error">
+<td>error</td>
+<td>28</td>
+<td>No summary for class \Zend_Exception</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>33</td>
+<td>No summary for property $_previous</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="package-contents"></div>
+<div class="package-contents">
+<a name="Amf/Response.php" id="Amf/Response.php"></a><h3>
+<i class="icon-file"></i>Amf/Response.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<thead><tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="error">
+<td>error</td>
+<td>60</td>
+<td>No summary for property $_outputStream</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents">
+<a name="Amf/Parse/Resource/MysqliResult.php" id="Amf/Parse/Resource/MysqliResult.php"></a><h3>
+<i class="icon-file"></i>Amf/Parse/Resource/MysqliResult.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<thead><tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="error">
+<td>error</td>
+<td>67</td>
+<td>No summary for property $mysqli_to_php</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="package-contents"></div>
+<div class="package-contents">
+<a name="Amf/Parse/TypeLoader.php" id="Amf/Parse/TypeLoader.php"></a><h3>
+<i class="icon-file"></i>Amf/Parse/TypeLoader.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<thead><tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="error">
+<td>error</td>
+<td>87</td>
+<td>No summary for property $_resourceLoader</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents">
+<a name="Amf/Exception.php" id="Amf/Exception.php"></a><h3>
+<i class="icon-file"></i>Amf/Exception.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<thead><tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="error">
+<td>error</td>
+<td>32</td>
+<td>No summary for class \Zend_Amf_Exception</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents">
+<a name="Amf/Server.php" id="Amf/Server.php"></a><h3>
+<i class="icon-file"></i>Amf/Server.php<small style="float: right;padding-right: 10px;">3</small>
+</h3>
+<div><table class="table markers table-bordered">
+<thead><tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="error">
+<td>error</td>
+<td>216</td>
+<td>No summary for method setSession()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>302</td>
+<td>Argument $source is missing from the Docblock of _dispatch</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>901</td>
+<td>Argument $code is missing from the Docblock of fault</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="Amf/Response/Http.php" id="Amf/Response/Http.php"></a><h3>
+<i class="icon-file"></i>Amf/Response/Http.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<thead><tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="error">
+<td>error</td>
+<td>57</td>
+<td>No summary for method isIeOverSsl()</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="Amf/Auth/Abstract.php" id="Amf/Auth/Abstract.php"></a><h3>
+<i class="icon-file"></i>Amf/Auth/Abstract.php<small style="float: right;padding-right: 10px;">5</small>
+</h3>
+<div><table class="table markers table-bordered">
+<thead><tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="error">
+<td>error</td>
+<td>35</td>
+<td>No summary for property $_username</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>36</td>
+<td>No summary for property $_password</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>38</td>
+<td>Argument $username is missing from the Docblock of setCredentials</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>38</td>
+<td>Argument $password is missing from the Docblock of setCredentials</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>38</td>
+<td>No summary for method setCredentials()</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="Amf/Request.php" id="Amf/Request.php"></a><h3>
+<i class="icon-file"></i>Amf/Request.php<small style="float: right;padding-right: 10px;">2</small>
+</h3>
+<div><table class="table markers table-bordered">
+<thead><tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="error">
+<td>error</td>
+<td>71</td>
+<td>No summary for property $_inputStream</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>76</td>
+<td>No summary for property $_deserializer</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents">
+<a name="Server/Method/Definition.php" id="Server/Method/Definition.php"></a><h3>
+<i class="icon-file"></i>Server/Method/Definition.php<small style="float: right;padding-right: 10px;">5</small>
+</h3>
+<div><table class="table markers table-bordered">
+<thead><tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="error">
+<td>error</td>
+<td>37</td>
+<td>No summary for property $_callback</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>42</td>
+<td>No summary for property $_invokeArguments</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>47</td>
+<td>No summary for property $_methodHelp</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>52</td>
+<td>No summary for property $_name</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>57</td>
+<td>No summary for property $_object</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents">
+<a name="Server/Reflection/Function/Abstract.php" id="Server/Reflection/Function/Abstract.php"></a><h3>
+<i class="icon-file"></i>Server/Reflection/Function/Abstract.php<small style="float: right;padding-right: 10px;">8</small>
+</h3>
+<div><table class="table markers table-bordered">
+<thead><tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="error">
+<td>error</td>
+<td>58</td>
+<td>No summary for property $_reflection</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>99</td>
+<td>No summary for property $_return</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>100</td>
+<td>No summary for property $_returnDesc</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>101</td>
+<td>No summary for property $_paramDesc</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>102</td>
+<td>No summary for property $_sigParams</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>103</td>
+<td>No summary for property $_sigParamsDepth</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>110</td>
+<td>Argument $namespace is missing from the Docblock of __construct</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>110</td>
+<td>Argument $argv is missing from the Docblock of __construct</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents">
+<a name="Server/Reflection/Parameter.php" id="Server/Reflection/Parameter.php"></a><h3>
+<i class="icon-file"></i>Server/Reflection/Parameter.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<thead><tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="error">
+<td>error</td>
+<td>38</td>
+<td>No summary for property $_reflection</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="package-contents"></div>
+<div class="package-contents">
+<a name="Server/Abstract.php" id="Server/Abstract.php"></a><h3>
+<i class="icon-file"></i>Server/Abstract.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<thead><tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="error">
+<td>error</td>
+<td>87</td>
+<td>No summary for property $_table</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents">
+<a name="Auth/Adapter/Ldap.php" id="Auth/Adapter/Ldap.php"></a><h3>
+<i class="icon-file"></i>Auth/Adapter/Ldap.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<thead><tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="error">
+<td>error</td>
+<td>35</td>
+<td>No summary for class \Zend_Auth_Adapter_Ldap</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents">
+<a name="Auth/Adapter/Exception.php" id="Auth/Adapter/Exception.php"></a><h3>
+<i class="icon-file"></i>Auth/Adapter/Exception.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<thead><tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="error">
+<td>error</td>
+<td>37</td>
+<td>No summary for class \Zend_Auth_Adapter_Exception</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="Auth/Adapter/DbTable.php" id="Auth/Adapter/DbTable.php"></a><h3>
+<i class="icon-file"></i>Auth/Adapter/DbTable.php<small style="float: right;padding-right: 10px;">2</small>
+</h3>
+<div><table class="table markers table-bordered">
+<thead><tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="error">
+<td>error</td>
+<td>47</td>
+<td>No summary for class \Zend_Auth_Adapter_DbTable</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>60</td>
+<td>No summary for property $_dbSelect</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="Auth/Adapter/Interface.php" id="Auth/Adapter/Interface.php"></a><h3>
+<i class="icon-file"></i>Auth/Adapter/Interface.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<thead><tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="error">
+<td>error</td>
+<td>37</td>
+<td>No summary for interface ""</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="Auth/Adapter/Digest.php" id="Auth/Adapter/Digest.php"></a><h3>
+<i class="icon-file"></i>Auth/Adapter/Digest.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<thead><tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="error">
+<td>error</td>
+<td>37</td>
+<td>No summary for class \Zend_Auth_Adapter_Digest</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="Auth/Exception.php" id="Auth/Exception.php"></a><h3>
+<i class="icon-file"></i>Auth/Exception.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<thead><tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="error">
+<td>error</td>
+<td>35</td>
+<td>No summary for class \Zend_Auth_Exception</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="Auth/Result.php" id="Auth/Result.php"></a><h3>
+<i class="icon-file"></i>Auth/Result.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<thead><tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="error">
+<td>error</td>
+<td>29</td>
+<td>No summary for class \Zend_Auth_Result</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="Auth/Storage/Exception.php" id="Auth/Storage/Exception.php"></a><h3>
+<i class="icon-file"></i>Auth/Storage/Exception.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<thead><tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="error">
+<td>error</td>
+<td>37</td>
+<td>No summary for class \Zend_Auth_Storage_Exception</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="package-contents"></div>
+<div class="package-contents">
+<a name="Auth/Storage/Session.php" id="Auth/Storage/Session.php"></a><h3>
+<i class="icon-file"></i>Auth/Storage/Session.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<thead><tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="error">
+<td>error</td>
+<td>43</td>
+<td>No summary for class \Zend_Auth_Storage_Session</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="Auth/Storage/Interface.php" id="Auth/Storage/Interface.php"></a><h3>
+<i class="icon-file"></i>Auth/Storage/Interface.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<thead><tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="error">
+<td>error</td>
+<td>30</td>
+<td>No summary for interface ""</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="Auth.php" id="Auth.php"></a><h3>
+<i class="icon-file"></i>Auth.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<thead><tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="error">
+<td>error</td>
+<td>29</td>
+<td>No summary for class \Zend_Auth</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="package-contents"></div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.8.5</a> and<br>
+            generated on 2015-11-23T12:38:54-06:00.<br></footer></div>
+</div>
+</body>
+</html>
