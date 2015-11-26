@@ -752,8 +752,8 @@ class Zend_Amf_ServerTest extends PHPUnit_Framework_TestCase
      */
     public function testSetRequestShouldRaiseExceptionOnInvalidRequestObjects()
     {
-        require_once 'Zend/XmlRpc/Request.php';
-        $request = new Zend_XmlRpc_Request;
+//        require_once 'Zend/XmlRpc/Request.php';
+        $request = new \Zend\XmlRpc\Request();
         $this->_server->setRequest($request);
     }
 
@@ -785,8 +785,8 @@ class Zend_Amf_ServerTest extends PHPUnit_Framework_TestCase
      */
     public function testSetResponseShouldRaiseExceptionOnInvalidResponseObjects()
     {
-        require_once 'Zend/XmlRpc/Response.php';
-        $response = new Zend_XmlRpc_Response;
+//        require_once 'Zend/XmlRpc/Response.php';
+        $response = new \Zend\XmlRpc\Response();
         $this->_server->setResponse($response);
     }
 
